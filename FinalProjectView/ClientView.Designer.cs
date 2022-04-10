@@ -32,7 +32,6 @@ namespace FinalProjectView
             this.uxAdminButton = new System.Windows.Forms.Button();
             this.uxStatePicker = new System.Windows.Forms.ComboBox();
             this.uxStateLabel = new System.Windows.Forms.Label();
-            this.uxResultsBox = new System.Windows.Forms.ListBox();
             this.uxAddressBox = new System.Windows.Forms.TextBox();
             this.uxAddressLabel = new System.Windows.Forms.Label();
             this.uxStorefrontBox = new System.Windows.Forms.TextBox();
@@ -43,11 +42,18 @@ namespace FinalProjectView
             this.uxComponentCategoryLabel = new System.Windows.Forms.Label();
             this.uxComponentNameLabel = new System.Windows.Forms.Label();
             this.uxModelNumberLabel = new System.Windows.Forms.Label();
+            this.uxSearchButton = new System.Windows.Forms.Button();
+            this.uxResultsBox = new System.Windows.Forms.ListView();
+            this.uxNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uxModelNumberColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uxPriceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uxInStockColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uxLocationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // uxAdminButton
             // 
-            this.uxAdminButton.Location = new System.Drawing.Point(676, 12);
+            this.uxAdminButton.Location = new System.Drawing.Point(986, 12);
             this.uxAdminButton.Name = "uxAdminButton";
             this.uxAdminButton.Size = new System.Drawing.Size(112, 51);
             this.uxAdminButton.TabIndex = 0;
@@ -63,6 +69,7 @@ namespace FinalProjectView
             this.uxStatePicker.Name = "uxStatePicker";
             this.uxStatePicker.Size = new System.Drawing.Size(106, 24);
             this.uxStatePicker.TabIndex = 1;
+            this.uxStatePicker.VisibleChanged += new System.EventHandler(this.uxStatePicker_VisibleChanged);
             // 
             // uxStateLabel
             // 
@@ -72,15 +79,6 @@ namespace FinalProjectView
             this.uxStateLabel.Size = new System.Drawing.Size(45, 17);
             this.uxStateLabel.TabIndex = 2;
             this.uxStateLabel.Text = "State:";
-            // 
-            // uxResultsBox
-            // 
-            this.uxResultsBox.FormattingEnabled = true;
-            this.uxResultsBox.ItemHeight = 16;
-            this.uxResultsBox.Location = new System.Drawing.Point(339, 30);
-            this.uxResultsBox.Name = "uxResultsBox";
-            this.uxResultsBox.Size = new System.Drawing.Size(316, 372);
-            this.uxResultsBox.TabIndex = 3;
             // 
             // uxAddressBox
             // 
@@ -164,11 +162,65 @@ namespace FinalProjectView
             this.uxModelNumberLabel.TabIndex = 13;
             this.uxModelNumberLabel.Text = "Model No.:";
             // 
+            // uxSearchButton
+            // 
+            this.uxSearchButton.Location = new System.Drawing.Point(92, 374);
+            this.uxSearchButton.Name = "uxSearchButton";
+            this.uxSearchButton.Size = new System.Drawing.Size(112, 51);
+            this.uxSearchButton.TabIndex = 14;
+            this.uxSearchButton.Text = "Search";
+            this.uxSearchButton.UseVisualStyleBackColor = true;
+            this.uxSearchButton.Click += new System.EventHandler(this.uxSearchButton_Click);
+            // 
+            // uxResultsBox
+            // 
+            this.uxResultsBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.uxNameColumn,
+            this.uxModelNumberColumn,
+            this.uxPriceColumn,
+            this.uxInStockColumn,
+            this.uxLocationColumn});
+            this.uxResultsBox.FullRowSelect = true;
+            this.uxResultsBox.HideSelection = false;
+            this.uxResultsBox.Location = new System.Drawing.Point(344, 26);
+            this.uxResultsBox.Name = "uxResultsBox";
+            this.uxResultsBox.Size = new System.Drawing.Size(618, 399);
+            this.uxResultsBox.TabIndex = 15;
+            this.uxResultsBox.UseCompatibleStateImageBehavior = false;
+            this.uxResultsBox.View = System.Windows.Forms.View.Details;
+            // 
+            // uxNameColumn
+            // 
+            this.uxNameColumn.Text = "Name";
+            this.uxNameColumn.Width = 120;
+            // 
+            // uxModelNumberColumn
+            // 
+            this.uxModelNumberColumn.Text = "ModelNo.";
+            this.uxModelNumberColumn.Width = 102;
+            // 
+            // uxPriceColumn
+            // 
+            this.uxPriceColumn.Text = "Price";
+            this.uxPriceColumn.Width = 93;
+            // 
+            // uxInStockColumn
+            // 
+            this.uxInStockColumn.Text = "In Stock";
+            this.uxInStockColumn.Width = 89;
+            // 
+            // uxLocationColumn
+            // 
+            this.uxLocationColumn.Text = "Location";
+            this.uxLocationColumn.Width = 124;
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1110, 449);
+            this.Controls.Add(this.uxResultsBox);
+            this.Controls.Add(this.uxSearchButton);
             this.Controls.Add(this.uxModelNumberLabel);
             this.Controls.Add(this.uxComponentNameLabel);
             this.Controls.Add(this.uxComponentCategoryLabel);
@@ -179,7 +231,6 @@ namespace FinalProjectView
             this.Controls.Add(this.uxStorefrontBox);
             this.Controls.Add(this.uxAddressLabel);
             this.Controls.Add(this.uxAddressBox);
-            this.Controls.Add(this.uxResultsBox);
             this.Controls.Add(this.uxStateLabel);
             this.Controls.Add(this.uxStatePicker);
             this.Controls.Add(this.uxAdminButton);
@@ -195,7 +246,6 @@ namespace FinalProjectView
         private System.Windows.Forms.Button uxAdminButton;
         private System.Windows.Forms.ComboBox uxStatePicker;
         private System.Windows.Forms.Label uxStateLabel;
-        private System.Windows.Forms.ListBox uxResultsBox;
         private System.Windows.Forms.TextBox uxAddressBox;
         private System.Windows.Forms.Label uxAddressLabel;
         private System.Windows.Forms.TextBox uxStorefrontBox;
@@ -206,6 +256,13 @@ namespace FinalProjectView
         private System.Windows.Forms.Label uxComponentCategoryLabel;
         private System.Windows.Forms.Label uxComponentNameLabel;
         private System.Windows.Forms.Label uxModelNumberLabel;
+        private System.Windows.Forms.Button uxSearchButton;
+        private System.Windows.Forms.ListView uxResultsBox;
+        private System.Windows.Forms.ColumnHeader uxNameColumn;
+        private System.Windows.Forms.ColumnHeader uxModelNumberColumn;
+        private System.Windows.Forms.ColumnHeader uxPriceColumn;
+        private System.Windows.Forms.ColumnHeader uxInStockColumn;
+        private System.Windows.Forms.ColumnHeader uxLocationColumn;
     }
 }
 
