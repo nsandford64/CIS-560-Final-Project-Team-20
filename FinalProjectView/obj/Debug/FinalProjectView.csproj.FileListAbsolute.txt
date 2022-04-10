@@ -1,0 +1,11 @@
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\FinalProjectView.exe.config
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\FinalProjectView.exe
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\FinalProjectView.pdb
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.AssemblyReference.cache
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.Properties.Resources.resources
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.GenerateResource.cache
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CoreCompileInputs.cache
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.exe
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.pdb
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.AdminView.resources
+C:\Users\Noah\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.ClientView.resources
