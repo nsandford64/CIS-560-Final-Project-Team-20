@@ -10,8 +10,7 @@ namespace FinalProjectView
     {
         private ClientView c;
         private AdminView a;
-        private bool clientOn = true;
-        
+
         public ViewController()
         {
 
@@ -34,5 +33,6 @@ namespace FinalProjectView
             a.Hide();
             c.Show();
         }
+
     }
 }

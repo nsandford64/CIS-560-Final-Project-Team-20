@@ -63,7 +63,6 @@ namespace FinalProjectView
             // 
             // uxStatePicker
             // 
-            this.uxStatePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxStatePicker.FormattingEnabled = true;
             this.uxStatePicker.Location = new System.Drawing.Point(92, 26);
             this.uxStatePicker.Name = "uxStatePicker";

@@ -1,0 +1,8 @@
+CREATE TABLE PartFinder.Cities
+(
+	CityID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CityName NVARCHAR(32) NOT NULL,
+	StateID INT NOT NULL FOREIGN KEY REFERENCES PartFinder.States(StateID)
+
+	UNIQUE(CityName, StateID)
+);

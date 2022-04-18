@@ -1,0 +1,10 @@
+CREATE TABLE PartFinder.Storefront
+(
+	StoreID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	StoreName NVARCHAR(32) NOT NULL,
+	StoreAddress NVARCHAR(32) NOT NULL,
+	ZipCode INT NOT NULL,
+	CityID INT NOT NULL FOREIGN KEY REFERENCES PartFinder.Cities(CityID)
+
+	UNIQUE(StoreAddress, ZipCode)
+);
