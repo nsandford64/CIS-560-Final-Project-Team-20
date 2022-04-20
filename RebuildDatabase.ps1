@@ -1,6 +1,6 @@
 Param(
    [string] $Server = "(localdb)\MSSQLLocalDb",
-   [string] $Database = "nsandford64"
+   [string] $Database = "partfinder"
 )
 
 # This script requires the SQL Server module for PowerShell.
@@ -44,7 +44,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectDat
 
 
 Write-Host "Stored procedures..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetComponents.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetComponentsByName.sql"
 
 Write-Host "Inserting data..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertStates.sql"

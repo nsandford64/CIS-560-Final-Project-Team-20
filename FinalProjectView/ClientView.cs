@@ -33,8 +33,13 @@ namespace FinalProjectView
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            uxResultsBox.Columns.AddRange(new ColumnHeader[] {"ComponentID", "Component Name", "Model Number", "ManufacturerID", "ComponentCategoryID", "MSRP"})
-            foreach(Component com in c.GetData())
+            uxResultsBox.Columns.Add("ComponentID");
+            uxResultsBox.Columns.Add("Component Name");
+            uxResultsBox.Columns.Add("Model Number");
+            uxResultsBox.Columns.Add("ManufacturerID");
+            uxResultsBox.Columns.Add("ComponentCategoryID");
+            uxResultsBox.Columns.Add("MSRP");
+            foreach(Component com in c.GetData(uxComponentNameBox.Text))
             {
                 uxResultsBox.Items.Add(new ListViewItem(new string[] {"" + com.ComponentID, com.ComponentName,
                     com.ModelNumber, "" + com.ManufacturerID, "" + com.ComponentCategoryID, "" + com.MSRP }));
@@ -50,6 +55,11 @@ namespace FinalProjectView
                 uxComponentCategoryPicker.DataSource = ComponentCategories;
                 set = false;
             }
+        }
+
+        private void uxStorefrontBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,9 +41,9 @@ namespace FinalProjectView
             c.Show();
         }
 
-        public List<Component> GetData()
+        public List<Component> GetData(string name)
         {
-            return repo.GetComponents("GTX 1080");
+            return repo.GetComponentsByName(name);
         }
 
     }
