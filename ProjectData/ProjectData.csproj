@@ -60,6 +60,7 @@
     <Content Include="Sql\Data\InsertComponents.sql" />
     <Content Include="Sql\Data\InsertManufacturer.sql" />
     <Content Include="Sql\Data\InsertStates.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
     <Content Include="Sql\Schemas\PartFinder.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\PartFinder.Cities.sql" />
@@ -70,5 +71,6 @@
     <Content Include="Sql\Tables\PartFinder.States.sql" />
     <Content Include="Sql\Tables\PartFinder.Storefront.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

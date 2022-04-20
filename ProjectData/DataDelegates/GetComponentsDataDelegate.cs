@@ -14,7 +14,7 @@ namespace ProjectData.DataDelegates
         private readonly string componentName;
 
         public GetComponentsDataDelegate(string componentName)
-           : base("Component.GetComponents")
+           : base("PartFinder.GetComponents")
         {
             this.componentName = componentName;
         }
@@ -23,7 +23,7 @@ namespace ProjectData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("ComponentName", componentName);
+            command.Parameters.AddWithValue("Name", componentName);
         }
 
         public override List<Component> Translate(SqlCommand command, IDataRowReader reader)

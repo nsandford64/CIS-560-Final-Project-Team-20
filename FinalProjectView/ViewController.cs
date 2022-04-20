@@ -43,7 +43,7 @@ namespace FinalProjectView
 
         public List<Component> GetData()
         {
-            return repo.GetComponents("GTX 1060");
+            return repo.GetComponents("GTX 1080");
         }
 
     }

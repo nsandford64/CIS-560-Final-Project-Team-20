@@ -44,11 +44,6 @@ namespace FinalProjectView
             this.uxModelNumberLabel = new System.Windows.Forms.Label();
             this.uxSearchButton = new System.Windows.Forms.Button();
             this.uxResultsBox = new System.Windows.Forms.ListView();
-            this.uxNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.uxModelNumberColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.uxPriceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.uxInStockColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.uxLocationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -173,12 +168,6 @@ namespace FinalProjectView
             // 
             // uxResultsBox
             // 
-            this.uxResultsBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.uxNameColumn,
-            this.uxModelNumberColumn,
-            this.uxPriceColumn,
-            this.uxInStockColumn,
-            this.uxLocationColumn});
             this.uxResultsBox.FullRowSelect = true;
             this.uxResultsBox.HideSelection = false;
             this.uxResultsBox.Location = new System.Drawing.Point(344, 26);
@@ -187,31 +176,6 @@ namespace FinalProjectView
             this.uxResultsBox.TabIndex = 15;
             this.uxResultsBox.UseCompatibleStateImageBehavior = false;
             this.uxResultsBox.View = System.Windows.Forms.View.Details;
-            // 
-            // uxNameColumn
-            // 
-            this.uxNameColumn.Text = "Name";
-            this.uxNameColumn.Width = 120;
-            // 
-            // uxModelNumberColumn
-            // 
-            this.uxModelNumberColumn.Text = "ModelNo.";
-            this.uxModelNumberColumn.Width = 102;
-            // 
-            // uxPriceColumn
-            // 
-            this.uxPriceColumn.Text = "Price";
-            this.uxPriceColumn.Width = 93;
-            // 
-            // uxInStockColumn
-            // 
-            this.uxInStockColumn.Text = "In Stock";
-            this.uxInStockColumn.Width = 89;
-            // 
-            // uxLocationColumn
-            // 
-            this.uxLocationColumn.Text = "Location";
-            this.uxLocationColumn.Width = 124;
             // 
             // ClientView
             // 
@@ -257,11 +221,6 @@ namespace FinalProjectView
         private System.Windows.Forms.Label uxModelNumberLabel;
         private System.Windows.Forms.Button uxSearchButton;
         private System.Windows.Forms.ListView uxResultsBox;
-        private System.Windows.Forms.ColumnHeader uxNameColumn;
-        private System.Windows.Forms.ColumnHeader uxModelNumberColumn;
-        private System.Windows.Forms.ColumnHeader uxPriceColumn;
-        private System.Windows.Forms.ColumnHeader uxInStockColumn;
-        private System.Windows.Forms.ColumnHeader uxLocationColumn;
     }
 }
 

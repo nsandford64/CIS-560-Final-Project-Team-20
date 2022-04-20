@@ -33,9 +33,11 @@ namespace FinalProjectView
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
+            uxResultsBox.Columns.AddRange(new ColumnHeader[] {"ComponentID", "Component Name", "Model Number", "ManufacturerID", "ComponentCategoryID", "MSRP"})
             foreach(Component com in c.GetData())
             {
-                uxResultsBox.Items.Add(new ListViewItem(new[] { "2060 super", "2060jaksjd;aljsd;f", "300.00", "false", "nowhere" }));
+                uxResultsBox.Items.Add(new ListViewItem(new string[] {"" + com.ComponentID, com.ComponentName,
+                    com.ModelNumber, "" + com.ManufacturerID, "" + com.ComponentCategoryID, "" + com.MSRP }));
             }
 
         }
