@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectData;
+using ProjectData.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,11 @@ namespace FinalProjectView
 {
     public class ViewController
     {
+
+        const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=nsandford64;Integrated Security=SSPI;";
+
+        SqlComponentRepository repo = new SqlComponentRepository(connectionString);
+        
         private ClientView c;
         private AdminView a;
 
@@ -32,6 +39,11 @@ namespace FinalProjectView
         {
             a.Hide();
             c.Show();
+        }
+
+        public List<Component> GetData()
+        {
+            return repo.GetComponents("GTX 1060");
         }
 
     }

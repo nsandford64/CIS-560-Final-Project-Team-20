@@ -1,0 +1,9 @@
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\obj\Debug\ProjectData.csproj.AssemblyReference.cache
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\obj\Debug\ProjectData.csproj.CoreCompileInputs.cache
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\bin\Debug\ProjectData.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\bin\Debug\ProjectData.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\bin\Debug\DataAccess.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\bin\Debug\DataAccess.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\obj\Debug\ProjectData.csproj.CopyComplete
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\obj\Debug\ProjectData.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\ProjectData\obj\Debug\ProjectData.pdb

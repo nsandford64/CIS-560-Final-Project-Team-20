@@ -53,7 +53,11 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData
 #>
 
 Write-Host "Inserting data..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertData.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertStates.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertCities.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertManufacturer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertComponentCategory.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "DataAccess\Sql\Data\InsertComponents.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""

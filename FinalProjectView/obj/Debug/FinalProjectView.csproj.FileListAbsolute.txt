@@ -20,3 +20,8 @@ C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\D
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CoreCompileInputs.cache
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.exe
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CopyComplete

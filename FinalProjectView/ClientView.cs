@@ -1,6 +1,6 @@
-﻿using System;
+﻿using ProjectData.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -33,7 +33,11 @@ namespace FinalProjectView
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            uxResultsBox.Items.Add(new ListViewItem(new[] { "2060 super", "2060jaksjd;aljsd;f", "300.00", "false", "nowhere" }));
+            foreach(Component com in c.GetData())
+            {
+                uxResultsBox.Items.Add(new ListViewItem(new[] { "2060 super", "2060jaksjd;aljsd;f", "300.00", "false", "nowhere" }));
+            }
+
         }
 
         private void uxStatePicker_VisibleChanged(object sender, EventArgs e)

@@ -1,0 +1,11 @@
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\foxxt\Downloads\DataAccessDemo2\DataAccessDemo2\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.pdb
