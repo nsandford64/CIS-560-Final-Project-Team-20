@@ -44,14 +44,18 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectDat
 
 
 Write-Host "Stored procedures..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetComponentsByName.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetComponents.sql"
 
 Write-Host "Inserting data..."
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponentCategory.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertManufacturer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponents.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertStates.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertCities.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertManufacturer.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponentCategory.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponents.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertStorefront.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponentStorefront.sql"
+
+
 
 Write-Host "Rebuild completed."
 Write-Host ""
