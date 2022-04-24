@@ -25,3 +25,8 @@ C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\D
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.pdb
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.pdb
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CopyComplete
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.dll
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.dll
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.pdb
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.pdb
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CopyComplete

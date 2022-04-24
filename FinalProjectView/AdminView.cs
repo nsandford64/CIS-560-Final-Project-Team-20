@@ -208,6 +208,7 @@ namespace FinalProjectView
                     input.Add(uxManufacturerBox.Text);
                     input.Add(uxComponentCategoryBox.Text);
                     input.Add(uxMSRPBox.Text);
+                    c.InsertData(input, AdminState.Component);
                 }
             }
             if (state == AdminState.Cities)
@@ -220,6 +221,7 @@ namespace FinalProjectView
                 {
                     input.Add(uxCityNameBox.Text);
                     input.Add(uxStateNameBox.Text);
+                    c.InsertData(input, AdminState.Cities);
                 } 
             }
             if (state == AdminState.Manufacturer)
@@ -231,6 +233,7 @@ namespace FinalProjectView
                 else
                 {
                     input.Add(uxManufacturerNameBox.Text);
+                    c.InsertData(input, AdminState.Manufacturer);
                 }
             }
             if (state == AdminState.Storefront)
@@ -246,6 +249,7 @@ namespace FinalProjectView
                     input.Add(uxStoreAddressBox.Text);
                     input.Add(uxZipCodeBox.Text);
                     input.Add(uxStoreCityBox.Text);
+                    c.InsertData(input, AdminState.Storefront);
                 }
             }
             if (state == AdminState.ComponentStorefront)
@@ -261,9 +265,9 @@ namespace FinalProjectView
                     input.Add(uxZipCodeComboBox.Text);
                     input.Add(uxModelNumberComboBox.Text);
                     input.Add(uxPriceComboBox.Text);
+                    c.InsertData(input, AdminState.ComponentStorefront);
                 }
             }
-            c.InsertData(input);
         }
 
         private void uxComponentStorefrontButton_Click(object sender, EventArgs e)

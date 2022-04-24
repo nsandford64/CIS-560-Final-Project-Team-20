@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjectData</RootNamespace>
     <AssemblyName>ProjectData</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
+    <Compile Include="DataDelegates\InsertComponentDataDelegate.cs" />
     <Compile Include="IComponentRepository.cs" />
     <Compile Include="Models\Component.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
@@ -63,6 +65,7 @@
     <Content Include="Sql\Data\InsertStates.sql" />
     <Content Include="Sql\Data\InsertStorefront.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
+    <Content Include="Sql\Procedures\PartFinder.InsertComponent.sql" />
     <Content Include="Sql\Schemas\PartFinder.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\PartFinder.Cities.sql" />

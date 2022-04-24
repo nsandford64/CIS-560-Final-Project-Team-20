@@ -9,3 +9,9 @@ C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\bin\Debug\D
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\DataAccess\obj\Debug\DataAccess.pdb

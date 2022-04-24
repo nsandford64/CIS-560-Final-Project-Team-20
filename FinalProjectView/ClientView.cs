@@ -61,5 +61,22 @@ namespace FinalProjectView
         {
 
         }
+
+        private void uxComponentPropertyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (uxComponentPropertyCheckBox.Checked)
+            {
+                uxComponentCategoryLabel.Enabled = true;
+                uxComponentCategoryPicker.Enabled = true;
+
+                uxComponentNameBox.Enabled = true;
+                uxComponentNameLabel.Enabled = true;
+            }
+        }
+
+        private void uxLocationPropertyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
