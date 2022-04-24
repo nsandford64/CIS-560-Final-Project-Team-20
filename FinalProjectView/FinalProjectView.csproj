@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminState.cs" />
     <Compile Include="AdminView.cs">
       <SubType>Form</SubType>
     </Compile>

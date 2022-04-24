@@ -46,5 +46,10 @@ namespace FinalProjectView
             return repo.GetComponentsByName(name);
         }
 
+        public bool InsertData(List<string> data)
+        {
+            return true;
+        }
+
     }
 }
