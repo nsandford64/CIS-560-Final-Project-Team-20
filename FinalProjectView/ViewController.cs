@@ -48,10 +48,7 @@ namespace FinalProjectView
 
         public void InsertData(List<string> data, AdminState state)
         {
-            if(state == AdminState.Component)
-            {
-                repo.InsertComponent(data[0], data[1], data[2], data[3], Convert.ToInt32(data[4]));
-            }
+            
         }
 
     }
