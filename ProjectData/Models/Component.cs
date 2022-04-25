@@ -14,19 +14,19 @@ namespace ProjectData.Models
 
         public string ModelNumber { get; }
 
-        public int ManufacturerID { get; }
+        public string Manufacturer { get; }
 
-        public ComponentCategory ComponentCategoryID { get; }
+        public ComponentCategory ComponentCategory { get; }
 
-        public int MSRP { get; }
+        public decimal MSRP { get; }
 
-        public Component(int CID, string CN, string MN, int MID, ComponentCategory CCID, int M)
+        public Component(int CID, string CN, string MN, string MID, ComponentCategory CCID, decimal M)
         {
             ComponentID = CID;
             ComponentName = CN;
             ModelNumber = MN;
-            ManufacturerID = MID;
-            ComponentCategoryID = CCID;
+            Manufacturer = MID;
+            ComponentCategory = CCID;
             MSRP = M;
         }
     }

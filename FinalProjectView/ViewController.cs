@@ -11,9 +11,10 @@ namespace FinalProjectView
     public class ViewController
     {
 
-        const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=nsandford64;Integrated Security=SSPI;";
+        const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=partfinder;Integrated Security=SSPI;";
 
-        SqlComponentRepository repo = new SqlComponentRepository(connectionString);
+        SqlComponentRepository componentRepo = new SqlComponentRepository(connectionString);
+        SqlManufacturerRepository manufacturerRepo = new SqlManufacturerRepository(connectionString);
         
         private ClientView c;
         private AdminView a;
@@ -43,12 +44,19 @@ namespace FinalProjectView
 
         public List<Component> GetData(string name)
         {
-            return repo.GetComponentsByName(name);
+            return componentRepo.GetComponentsByName(name);
         }
 
         public void InsertData(List<string> data, AdminState state)
         {
-            
+            if (state == AdminState.Component)
+            {
+                componentRepo.InsertComponent(data);
+            }
+            if (state == AdminState.Manufacturer)
+            {
+                manufacturerRepo.InsertManufacturer(data);
+            }
         }
 
     }

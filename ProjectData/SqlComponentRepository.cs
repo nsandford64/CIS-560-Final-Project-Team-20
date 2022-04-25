@@ -35,9 +35,10 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
-        public void InsertComponent(string name, string modelNo, string manufacturer, string category, int MSRP)
+        public Component InsertComponent(List<string> data)
         {
-            var d = new InsertComponentDataDelegate(name, modelNo, manufacturer, category, MSRP);
+            var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));
+            return executor.ExecuteNonQuery(d);
         }
 
     }

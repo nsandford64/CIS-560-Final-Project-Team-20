@@ -28,17 +28,14 @@ namespace ProjectData.DataDelegates
 
         public override List<Component> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
-
             List<Component> results = new List<Component>();
             while (reader.Read())
             {
                 results.Add(new Component(
                    reader.GetInt32("ComponentID"),
-                   componentName,
+                   reader.GetString("ComponentName"),
                    reader.GetString("ModelNumber"),
-                   reader.GetInt32("ManufacturerID"),
+                   reader.GetInt32("ManufacturerID").ToString(),
                    (ComponentCategory)reader.GetInt32("ComponentCategoryID"),
                    reader.GetInt32("MSRP")));
             }

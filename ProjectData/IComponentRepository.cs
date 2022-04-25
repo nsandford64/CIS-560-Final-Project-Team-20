@@ -10,5 +10,7 @@ namespace ProjectData
     public interface IComponentRepository
     {
         List<Component> GetComponents(string componentName);
+
+        Component InsertComponent(List<string> data);
     }
 }
