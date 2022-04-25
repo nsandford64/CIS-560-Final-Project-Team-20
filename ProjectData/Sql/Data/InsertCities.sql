@@ -7,6 +7,7 @@
  FROM
  (
 	VALUES
+	(N'Salt Lake City', N'UT'),
 	(N'Alabama', N'AL'),
 (N'Abbeville city', N'AL'),
 (N'Adamsville city', N'AL'),
