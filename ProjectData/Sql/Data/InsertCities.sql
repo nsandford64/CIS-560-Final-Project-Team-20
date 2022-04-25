@@ -7,7 +7,7 @@
  FROM
  (
 	VALUES
-	(N'Salt Lake City', N'UT'),
+	
 	(N'Alabama', N'AL'),
 (N'Abbeville city', N'AL'),
 (N'Adamsville city', N'AL'),
@@ -5015,3 +5015,74 @@ INNER JOIN PartFinder.States S ON S.StateAbbrev = C.StateAbbrev;
 
 
 
+INSERT PartFinder.Cities(CityName, StateID)
+ SELECT C.CityName, S.StateID
+ FROM
+ (
+	VALUES
+	(N'Birmingham', N'AL'),
+	(N'Birmingham', N'TX'),
+(N'Fort Worth', N'TX'),
+(N'Austin', N'TX'),
+(N'Oklahoma City', N'OK'),
+(N'Philadelphia', N'PA'),
+(N'Pittsburgh', N'PA'),
+(N'Chesapeake', N'VA'),
+(N'Roanoke', N'VA'),
+(N'Virginia Beach', N'VA'),
+(N'Eden Prairie', N'MN'),
+(N'Maple Grove', N'MN'),
+(N'Grand Rapids', N'MI'),
+(N'Durham', N'NC'),
+(N'Jacksonville', N'NC'),
+(N'Orlando', N'FL'),
+(N'Tampa', N'FL'),
+(N'Annapolis', N'MD'),
+(N'Anchorage', N'AK'),
+(N'Tucson', N'AZ'),
+(N'Fayetteville', N'AR'),
+(N'Burbank', N'CA'),
+(N'Irvine', N'CA'),
+(N'Newington', N'CT'),
+(N'Newark', N'DE'),
+(N'Atlanta', N'GA'),
+(N'Honolulu', N'HI'),
+(N'Boise', N'ID'),
+(N'Burbank', N'IL'),
+(N'Bloomington', N'IN'),
+(N'Davenport', N'IA'),
+(N'Manhattan', N'KS'),
+(N'Topeka', N'KS'),
+(N'Lawrence', N'KS'),
+(N'Overland Park', N'KS'),
+(N'Wichita', N'KS'),
+(N'Lexington', N'KY'),
+(N'Baton Rouge', N'LA'),
+(N'Augusta', N'ME'),
+(N'Brockton', N'MA'),
+(N'Ann Arbor', N'MI'),
+(N'Madison', N'MS'),
+(N'Saint Louis', N'MO'),
+(N'Billings', N'MT'),
+(N'Omaha', N'NE'),
+(N'Las Vegas', N'NV'),
+(N'Concord', N'NH'),
+(N'Paramus', N'NJ'),
+(N'Albuquerque', N'NM'),
+(N'Brooklyn', N'NY'),
+(N'Bismarck', N'ND'),
+(N'Columbus', N'OH'),
+(N'Springfield', N'OR'),
+(N'Warwick', N'RI'),
+(N'Columbia', N'SC'),
+(N'Rapid City', N'SD'),
+(N'Jackson', N'TN'),
+(N'Salt Lake City', N'UT'),
+(N'Williston', N'VT'),
+(N'Seattle', N'WA'),
+(N'Charleston', N'WV'),
+(N'Madison', N'WI'),
+(N'Casper', N'WY')
+
+) AS C(CityName, StateAbbrev)
+INNER JOIN PartFinder.States S ON S.StateAbbrev = C.StateAbbrev;
