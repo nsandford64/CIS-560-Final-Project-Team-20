@@ -48,9 +48,10 @@
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
     <Compile Include="IAdminRepository.cs" />
     <Compile Include="IComponentRepository.cs" />
-    <Compile Include="IManufacturerRepository.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Component.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
+    <Compile Include="Models\ComponentStorefront.cs" />
     <Compile Include="Models\Manufacturer.cs" />
     <Compile Include="Models\Storefront.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData
 {
-    public class SqlAdminRepository
+    public class SqlAdminRepository : IAdminRepository
     {
         private readonly SqlCommandExecutor executor;
         
@@ -27,6 +27,12 @@ namespace ProjectData
         public Manufacturer InsertManufacturer(List<string> data)
         {
             var d = new InsertManufacturerDataDelegate(data[0]);
+            return executor.ExecuteNonQuery(d);
+        }
+
+        public Storefront InsertStorefront(List<string> data)
+        {
+            var d = new InsertStorefrontDataDelegate(data[0], data[1], data[2], data[3], data[4]);
             return executor.ExecuteNonQuery(d);
         }
     }

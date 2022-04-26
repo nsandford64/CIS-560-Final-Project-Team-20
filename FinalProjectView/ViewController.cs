@@ -14,7 +14,7 @@ namespace FinalProjectView
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=partfinder;Integrated Security=SSPI;";
 
         SqlComponentRepository componentRepo = new SqlComponentRepository(connectionString);
-        SqlManufacturerRepository manufacturerRepo = new SqlManufacturerRepository(connectionString);
+        SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
         
         private ClientView c;
         private AdminView a;
@@ -51,11 +51,19 @@ namespace FinalProjectView
         {
             if (state == AdminState.Component)
             {
-                componentRepo.InsertComponent(data);
+                adminRepo.InsertComponent(data);
             }
             if (state == AdminState.Manufacturer)
             {
-                manufacturerRepo.InsertManufacturer(data);
+                adminRepo.InsertManufacturer(data);
+            }
+            if (state == AdminState.Storefront)
+            {
+                adminRepo.InsertStorefront(data);
+            }
+            if (state == AdminState.ComponentStorefront)
+            {
+                adminRepo.UpdateComponentStorefront(data);
             }
         }
 

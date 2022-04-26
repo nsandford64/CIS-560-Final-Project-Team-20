@@ -14,5 +14,7 @@ namespace ProjectData
         Manufacturer InsertManufacturer(List<string> data);
 
         Storefront InsertStorefront(List<string> data);
+
+        ComponentStorefront InsertComponentStorefront(List<string> data);
     }
 }
