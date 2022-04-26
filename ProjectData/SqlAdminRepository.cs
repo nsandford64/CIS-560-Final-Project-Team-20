@@ -9,13 +9,19 @@ using System.Threading.Tasks;
 
 namespace ProjectData
 {
-    public class SqlManufacturerRepository : IManufacturerRepository
+    public class SqlAdminRepository
     {
         private readonly SqlCommandExecutor executor;
-
-        public SqlManufacturerRepository(string connectionString)
+        
+        public SqlAdminRepository(string connectionString)
         {
             executor = new SqlCommandExecutor(connectionString);
+        }
+
+        public Component InsertComponent(List<string> data)
+        {
+            var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));
+            return executor.ExecuteNonQuery(d);
         }
 
         public Manufacturer InsertManufacturer(List<string> data)
