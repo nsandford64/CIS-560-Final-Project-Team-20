@@ -63,7 +63,11 @@ namespace FinalProjectView
             }
             if (state == AdminState.ComponentStorefront)
             {
-                adminRepo.UpdateComponentStorefront(data);
+                adminRepo.InsertComponentStorefront(data);
+            }
+            if (state == AdminState.Cities)
+            {
+                adminRepo.InsertCity(data);
             }
         }
 

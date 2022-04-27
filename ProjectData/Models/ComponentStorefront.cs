@@ -8,18 +8,18 @@ namespace ProjectData.Models
 {
     public class ComponentStorefront
     {
-        public string StoreName { get; }
+        public string Address { get; }
 
-        public string ComponentName { get; }
+        public string ZipCode { get; }
 
         public decimal Price { get; }
 
         public bool InStock { get; }
 
-        public ComponentStorefront(string name, string component, decimal price, bool inStock)
+        public ComponentStorefront(string address, string zipCode, decimal price, bool inStock)
         {
-            StoreName = name;
-            ComponentName = component;
+            Address = address;
+            ZipCode = zipCode;
             Price = price;
             InStock = inStock;
         }

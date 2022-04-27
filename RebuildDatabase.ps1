@@ -49,6 +49,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectDat
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertCity.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertManufacturer.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertStorefront.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertComponentStorefront.sql"
 
 Write-Host "Inserting data..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Data\InsertComponentCategory.sql"

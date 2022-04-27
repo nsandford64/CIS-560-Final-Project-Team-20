@@ -113,6 +113,12 @@ namespace FinalProjectView
                 uxStoreCityLabel.Enabled = true;
                 activeControls.Add(uxStoreCityLabel);
 
+                uxStoreStateNameLabel.Enabled = true;
+                activeControls.Add(uxStoreStateNameLabel);
+
+                uxStoreStateBox.Enabled = true;
+                activeControls.Add(uxStoreStateBox);
+
                 state = s;
             }
             if (s == AdminState.ComponentStorefront && state != s)
@@ -239,7 +245,7 @@ namespace FinalProjectView
             if (state == AdminState.Storefront)
             {
                 if(uxStoreNameBox.Text == "" || uxStoreAddressBox.Text == "" ||
-                    uxZipCodeBox.Text == "" || uxStoreCityBox.Text == "")
+                    uxZipCodeBox.Text == "" || uxStoreCityBox.Text == "" || uxStoreStateBox.Text == "")
                 {
                     uxErrorLabel.Text = "ERROR IN STOREFRONT!";
                 }
@@ -249,6 +255,7 @@ namespace FinalProjectView
                     input.Add(uxStoreAddressBox.Text);
                     input.Add(uxZipCodeBox.Text);
                     input.Add(uxStoreCityBox.Text);
+                    input.Add(uxStoreStateBox.Text);
                     c.InsertData(input, AdminState.Storefront);
                 }
             }
@@ -265,6 +272,7 @@ namespace FinalProjectView
                     input.Add(uxZipCodeComboBox.Text);
                     input.Add(uxModelNumberComboBox.Text);
                     input.Add(uxPriceComboBox.Text);
+                    input.Add(Convert.ToString(Convert.ToInt32(uxInStockCheckBox.Checked)));
                     c.InsertData(input, AdminState.ComponentStorefront);
                 }
             }

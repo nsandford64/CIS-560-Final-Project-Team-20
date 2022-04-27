@@ -70,6 +70,8 @@ namespace FinalProjectView
             this.uxModelNumberComboBox = new System.Windows.Forms.TextBox();
             this.uxComponentStorefrontButton = new System.Windows.Forms.Button();
             this.uxInStockCheckBox = new System.Windows.Forms.CheckBox();
+            this.uxStoreStateNameLabel = new System.Windows.Forms.Label();
+            this.uxStoreStateBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uxClientButton
@@ -449,11 +451,31 @@ namespace FinalProjectView
             this.uxInStockCheckBox.Text = "In Stock?";
             this.uxInStockCheckBox.UseVisualStyleBackColor = true;
             // 
+            // uxStoreStateNameLabel
+            // 
+            this.uxStoreStateNameLabel.AutoSize = true;
+            this.uxStoreStateNameLabel.Enabled = false;
+            this.uxStoreStateNameLabel.Location = new System.Drawing.Point(559, 281);
+            this.uxStoreStateNameLabel.Name = "uxStoreStateNameLabel";
+            this.uxStoreStateNameLabel.Size = new System.Drawing.Size(86, 17);
+            this.uxStoreStateNameLabel.TabIndex = 44;
+            this.uxStoreStateNameLabel.Text = "State Name:";
+            // 
+            // uxStoreStateBox
+            // 
+            this.uxStoreStateBox.Enabled = false;
+            this.uxStoreStateBox.Location = new System.Drawing.Point(689, 276);
+            this.uxStoreStateBox.Name = "uxStoreStateBox";
+            this.uxStoreStateBox.Size = new System.Drawing.Size(100, 22);
+            this.uxStoreStateBox.TabIndex = 43;
+            // 
             // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 509);
+            this.Controls.Add(this.uxStoreStateNameLabel);
+            this.Controls.Add(this.uxStoreStateBox);
             this.Controls.Add(this.uxInStockCheckBox);
             this.Controls.Add(this.uxPriceComboLabel);
             this.Controls.Add(this.uxPriceComboBox);
@@ -546,5 +568,7 @@ namespace FinalProjectView
         private System.Windows.Forms.TextBox uxModelNumberComboBox;
         private System.Windows.Forms.Button uxComponentStorefrontButton;
         private System.Windows.Forms.CheckBox uxInStockCheckBox;
+        private System.Windows.Forms.Label uxStoreStateNameLabel;
+        private System.Windows.Forms.TextBox uxStoreStateBox;
     }
 }

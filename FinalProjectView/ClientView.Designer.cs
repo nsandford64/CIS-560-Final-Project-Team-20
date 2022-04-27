@@ -134,7 +134,7 @@ namespace FinalProjectView
             // uxComponentNameBox
             // 
             this.uxComponentNameBox.Enabled = false;
-            this.uxComponentNameBox.Location = new System.Drawing.Point(112, 394);
+            this.uxComponentNameBox.Location = new System.Drawing.Point(130, 394);
             this.uxComponentNameBox.Name = "uxComponentNameBox";
             this.uxComponentNameBox.Size = new System.Drawing.Size(230, 22);
             this.uxComponentNameBox.TabIndex = 9;
@@ -153,11 +153,11 @@ namespace FinalProjectView
             // 
             this.uxComponentNameLabel.AutoSize = true;
             this.uxComponentNameLabel.Enabled = false;
-            this.uxComponentNameLabel.Location = new System.Drawing.Point(57, 397);
+            this.uxComponentNameLabel.Location = new System.Drawing.Point(-1, 397);
             this.uxComponentNameLabel.Name = "uxComponentNameLabel";
-            this.uxComponentNameLabel.Size = new System.Drawing.Size(49, 17);
+            this.uxComponentNameLabel.Size = new System.Drawing.Size(125, 17);
             this.uxComponentNameLabel.TabIndex = 12;
-            this.uxComponentNameLabel.Text = "Name:";
+            this.uxComponentNameLabel.Text = "Component Name:";
             // 
             // uxSearchButton
             // 

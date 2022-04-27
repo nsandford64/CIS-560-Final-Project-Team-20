@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
+    <Compile Include="DataDelegates\InsertCityDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertComponentDataDelegate.cs" />
+    <Compile Include="DataDelegates\InsertComponentStorefrontDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertManufacturerDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
     <Compile Include="IAdminRepository.cs" />
@@ -75,6 +77,7 @@
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertCity.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertComponent.sql" />
+    <Content Include="Sql\Procedures\PartFinder.InsertComponentStorefront.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertManufacturer.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertStorefront.sql" />
     <Content Include="Sql\Schemas\PartFinder.sql" />
