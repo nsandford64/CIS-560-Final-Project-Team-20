@@ -56,7 +56,7 @@ namespace FinalProjectView
             // 
             // uxAdminButton
             // 
-            this.uxAdminButton.Location = new System.Drawing.Point(1138, 12);
+            this.uxAdminButton.Location = new System.Drawing.Point(1658, 13);
             this.uxAdminButton.Name = "uxAdminButton";
             this.uxAdminButton.Size = new System.Drawing.Size(112, 51);
             this.uxAdminButton.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace FinalProjectView
             this.uxStatePicker.FormattingEnabled = true;
             this.uxStatePicker.Location = new System.Drawing.Point(92, 120);
             this.uxStatePicker.Name = "uxStatePicker";
-            this.uxStatePicker.Size = new System.Drawing.Size(106, 24);
+            this.uxStatePicker.Size = new System.Drawing.Size(82, 24);
             this.uxStatePicker.TabIndex = 1;
             this.uxStatePicker.VisibleChanged += new System.EventHandler(this.uxStatePicker_VisibleChanged);
             // 
@@ -109,7 +109,6 @@ namespace FinalProjectView
             this.uxStorefrontBox.Name = "uxStorefrontBox";
             this.uxStorefrontBox.Size = new System.Drawing.Size(230, 22);
             this.uxStorefrontBox.TabIndex = 6;
-            this.uxStorefrontBox.TextChanged += new System.EventHandler(this.uxStorefrontBox_TextChanged);
             // 
             // uxStorefrontLabel
             // 
@@ -173,9 +172,9 @@ namespace FinalProjectView
             // 
             this.uxResultsBox.FullRowSelect = true;
             this.uxResultsBox.HideSelection = false;
-            this.uxResultsBox.Location = new System.Drawing.Point(433, 26);
+            this.uxResultsBox.Location = new System.Drawing.Point(519, 26);
             this.uxResultsBox.Name = "uxResultsBox";
-            this.uxResultsBox.Size = new System.Drawing.Size(699, 489);
+            this.uxResultsBox.Size = new System.Drawing.Size(1133, 775);
             this.uxResultsBox.TabIndex = 15;
             this.uxResultsBox.UseCompatibleStateImageBehavior = false;
             this.uxResultsBox.View = System.Windows.Forms.View.Details;
@@ -274,7 +273,7 @@ namespace FinalProjectView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 616);
+            this.ClientSize = new System.Drawing.Size(1782, 853);
             this.Controls.Add(this.uxMaxPriceBox);
             this.Controls.Add(this.uxMinPriceBox);
             this.Controls.Add(this.uxMaxPriceLabel);

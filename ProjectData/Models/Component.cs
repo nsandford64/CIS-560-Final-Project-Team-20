@@ -8,7 +8,17 @@ namespace ProjectData.Models
 {
     public class Component
     {
-        public int ComponentID { get; }
+        public string State { get; }
+
+        public string City { get; }
+
+        public string Address { get; }
+
+        public int ZipCode { get; }
+
+        public string Storefront { get; }
+
+        public ComponentCategory Category { get; }
 
         public string ComponentName { get; }
 
@@ -16,18 +26,25 @@ namespace ProjectData.Models
 
         public string Manufacturer { get; }
 
-        public ComponentCategory ComponentCategory { get; }
+        public decimal Price { get; }
 
-        public decimal MSRP { get; }
+        public object InStock { get; }
 
-        public Component(int CID, string CN, string MN, string MID, ComponentCategory CCID, decimal M)
+
+
+        public Component(string name, string model, string manufacturer, ComponentCategory category, decimal price, object stock, string store, string address, int zip, string city, string state)
         {
-            ComponentID = CID;
-            ComponentName = CN;
-            ModelNumber = MN;
-            Manufacturer = MID;
-            ComponentCategory = CCID;
-            MSRP = M;
+            ComponentName = name;
+            ModelNumber = model;
+            Manufacturer = manufacturer;
+            Category = category;
+            Price = price;
+            InStock = stock;
+            Address = address;
+            ZipCode = zip;
+            Storefront = store;
+            City = city;
+            State = state;
         }
     }
 }

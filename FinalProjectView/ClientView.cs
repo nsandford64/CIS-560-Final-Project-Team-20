@@ -13,8 +13,8 @@ namespace FinalProjectView
     public partial class ClientView : Form
     {
         private ViewController c;
-        private string[] ComponentCategories = new string[] { "---", "CPU", "Motherboard", "GPU", "RAM", "Power Supply", "Case", "Storage", "PC Cooling" };
-        private string[] StateAbbrevList = new string[] { "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+        private string[] ComponentCategories = new string[] { "", "CPU", "Motherboard", "GPU", "RAM", "PowerSupply", "Storage" };
+        private string[] StateAbbrevList = new string[] { "", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
                                                           "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
                                                           "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
                                                           "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" };
@@ -33,19 +33,53 @@ namespace FinalProjectView
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            uxResultsBox.Columns.Add("ComponentID");
+            uxResultsBox.Columns.Clear();
             uxResultsBox.Columns.Add("Component Name");
             uxResultsBox.Columns.Add("Model Number");
-            uxResultsBox.Columns.Add("ManufacturerID");
-            uxResultsBox.Columns.Add("ComponentCategoryID");
-            uxResultsBox.Columns.Add("MSRP");
+            uxResultsBox.Columns.Add("Manufacturer");
+            uxResultsBox.Columns.Add("ComponentCategory");
+            uxResultsBox.Columns.Add("Price");
+            uxResultsBox.Columns.Add("In Stock");
+            uxResultsBox.Columns.Add("Store");
+            uxResultsBox.Columns.Add("Address");
+            uxResultsBox.Columns.Add("Zip Code");
+            uxResultsBox.Columns.Add("City");
+            uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
-            foreach(Component com in c.GetData(uxComponentNameBox.Text))
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            List<Component> results = c.GetDataWithParameters(CollectData());
+            foreach(Component com in results)
             {
-                uxResultsBox.Items.Add(new ListViewItem(new string[] {"" + com.ComponentID, com.ComponentName,
-                    com.ModelNumber, "" + com.Manufacturer, "" + com.ComponentCategory, "" + com.MSRP }));
+                uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
+                    com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
+                    com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
             }
 
+        }
+
+        private List<string> CollectData()
+        {
+            List<string> search = new List<string>();
+            search.Add(uxStatePicker.Text);
+            
+            search.Add(uxAddressBox.Text);
+
+            search.Add(uxZipCodeBox.Text);
+ 
+            search.Add(uxStorefrontBox.Text);
+
+            search.Add(uxComponentCategoryPicker.Text);
+
+            search.Add(uxComponentNameBox.Text);
+
+            search.Add(uxManufacturerBox.Text);
+
+            search.Add(uxMinPriceBox.Text);
+
+            search.Add(uxMaxPriceBox.Text);
+
+            return search;
         }
 
         private void uxStatePicker_VisibleChanged(object sender, EventArgs e)

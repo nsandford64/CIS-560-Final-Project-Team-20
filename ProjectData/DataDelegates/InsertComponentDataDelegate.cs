@@ -42,8 +42,11 @@ namespace ProjectData.DataDelegates
 
         public override Component Translate(SqlCommand command)
         {
+            return null;
+            /*
             return new Component((int)command.Parameters["ComponentID"].Value, name, modelNo, manufacturer,
                 (ComponentCategory)Enum.Parse(typeof(ComponentCategory), category), MSRP);
+            */
         }
     }
 }

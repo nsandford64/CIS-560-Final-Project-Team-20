@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetDataDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertCityDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertComponentDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertComponentStorefrontDataDelegate.cs" />
@@ -74,6 +75,7 @@
     <Content Include="Sql\Data\InsertManufacturer.sql" />
     <Content Include="Sql\Data\InsertStates.sql" />
     <Content Include="Sql\Data\InsertStorefront.sql" />
+    <Content Include="Sql\Procedures\HolyGrailQuery.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertCity.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertComponent.sql" />

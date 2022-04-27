@@ -42,6 +42,11 @@ namespace FinalProjectView
             c.Show();
         }
 
+        public List<Component> GetDataWithParameters(List<string> parameters)
+        {
+            return componentRepo.GetComponents(parameters);
+        }
+
         public List<Component> GetData(string name)
         {
             return componentRepo.GetComponentsByName(name);
