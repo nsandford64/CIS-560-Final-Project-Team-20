@@ -37,7 +37,6 @@ namespace FinalProjectView
             this.uxModelNumberLabel = new System.Windows.Forms.Label();
             this.uxModelNumberBox = new System.Windows.Forms.TextBox();
             this.uxManufacturerLabel = new System.Windows.Forms.Label();
-            this.uxManufacturerBox = new System.Windows.Forms.TextBox();
             this.uxComponentCategoryLabel = new System.Windows.Forms.Label();
             this.uxComponentCategoryBox = new System.Windows.Forms.TextBox();
             this.uxMSRPLabel = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@ namespace FinalProjectView
             this.uxCityNameBox = new System.Windows.Forms.TextBox();
             this.uxAddCityButton = new System.Windows.Forms.Button();
             this.uxStateNameLabel = new System.Windows.Forms.Label();
-            this.uxStateNameBox = new System.Windows.Forms.TextBox();
             this.uxStoreCityLabel = new System.Windows.Forms.Label();
             this.uxStoreCityBox = new System.Windows.Forms.TextBox();
             this.uxZipCodeLabel = new System.Windows.Forms.Label();
@@ -71,7 +69,9 @@ namespace FinalProjectView
             this.uxComponentStorefrontButton = new System.Windows.Forms.Button();
             this.uxInStockCheckBox = new System.Windows.Forms.CheckBox();
             this.uxStoreStateNameLabel = new System.Windows.Forms.Label();
-            this.uxStoreStateBox = new System.Windows.Forms.TextBox();
+            this.uxManufacturerPicker = new System.Windows.Forms.ComboBox();
+            this.uxCityStatePicker = new System.Windows.Forms.ComboBox();
+            this.uxStoreStatePicker = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // uxClientButton
@@ -149,14 +149,6 @@ namespace FinalProjectView
             this.uxManufacturerLabel.Size = new System.Drawing.Size(96, 17);
             this.uxManufacturerLabel.TabIndex = 9;
             this.uxManufacturerLabel.Text = "Manufacturer:";
-            // 
-            // uxManufacturerBox
-            // 
-            this.uxManufacturerBox.Enabled = false;
-            this.uxManufacturerBox.Location = new System.Drawing.Point(161, 193);
-            this.uxManufacturerBox.Name = "uxManufacturerBox";
-            this.uxManufacturerBox.Size = new System.Drawing.Size(100, 22);
-            this.uxManufacturerBox.TabIndex = 8;
             // 
             // uxComponentCategoryLabel
             // 
@@ -259,14 +251,6 @@ namespace FinalProjectView
             this.uxStateNameLabel.Size = new System.Drawing.Size(86, 17);
             this.uxStateNameLabel.TabIndex = 21;
             this.uxStateNameLabel.Text = "State Name:";
-            // 
-            // uxStateNameBox
-            // 
-            this.uxStateNameBox.Enabled = false;
-            this.uxStateNameBox.Location = new System.Drawing.Point(417, 276);
-            this.uxStateNameBox.Name = "uxStateNameBox";
-            this.uxStateNameBox.Size = new System.Drawing.Size(100, 22);
-            this.uxStateNameBox.TabIndex = 20;
             // 
             // uxStoreCityLabel
             // 
@@ -461,21 +445,45 @@ namespace FinalProjectView
             this.uxStoreStateNameLabel.TabIndex = 44;
             this.uxStoreStateNameLabel.Text = "State Name:";
             // 
-            // uxStoreStateBox
+            // uxManufacturerPicker
             // 
-            this.uxStoreStateBox.Enabled = false;
-            this.uxStoreStateBox.Location = new System.Drawing.Point(689, 276);
-            this.uxStoreStateBox.Name = "uxStoreStateBox";
-            this.uxStoreStateBox.Size = new System.Drawing.Size(100, 22);
-            this.uxStoreStateBox.TabIndex = 43;
+            this.uxManufacturerPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uxManufacturerPicker.Enabled = false;
+            this.uxManufacturerPicker.FormattingEnabled = true;
+            this.uxManufacturerPicker.Location = new System.Drawing.Point(161, 191);
+            this.uxManufacturerPicker.Name = "uxManufacturerPicker";
+            this.uxManufacturerPicker.Size = new System.Drawing.Size(100, 24);
+            this.uxManufacturerPicker.TabIndex = 45;
+            // 
+            // uxCityStatePicker
+            // 
+            this.uxCityStatePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uxCityStatePicker.Enabled = false;
+            this.uxCityStatePicker.FormattingEnabled = true;
+            this.uxCityStatePicker.Location = new System.Drawing.Point(417, 273);
+            this.uxCityStatePicker.Name = "uxCityStatePicker";
+            this.uxCityStatePicker.Size = new System.Drawing.Size(100, 24);
+            this.uxCityStatePicker.TabIndex = 46;
+            // 
+            // uxStoreStatePicker
+            // 
+            this.uxStoreStatePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.uxStoreStatePicker.Enabled = false;
+            this.uxStoreStatePicker.FormattingEnabled = true;
+            this.uxStoreStatePicker.Location = new System.Drawing.Point(689, 281);
+            this.uxStoreStatePicker.Name = "uxStoreStatePicker";
+            this.uxStoreStatePicker.Size = new System.Drawing.Size(100, 24);
+            this.uxStoreStatePicker.TabIndex = 47;
             // 
             // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 509);
+            this.Controls.Add(this.uxStoreStatePicker);
+            this.Controls.Add(this.uxCityStatePicker);
+            this.Controls.Add(this.uxManufacturerPicker);
             this.Controls.Add(this.uxStoreStateNameLabel);
-            this.Controls.Add(this.uxStoreStateBox);
             this.Controls.Add(this.uxInStockCheckBox);
             this.Controls.Add(this.uxPriceComboLabel);
             this.Controls.Add(this.uxPriceComboBox);
@@ -497,7 +505,6 @@ namespace FinalProjectView
             this.Controls.Add(this.uxStoreNameBox);
             this.Controls.Add(this.uxStorefrontButton);
             this.Controls.Add(this.uxStateNameLabel);
-            this.Controls.Add(this.uxStateNameBox);
             this.Controls.Add(this.uxCityNameLabel);
             this.Controls.Add(this.uxCityNameBox);
             this.Controls.Add(this.uxAddCityButton);
@@ -509,7 +516,6 @@ namespace FinalProjectView
             this.Controls.Add(this.uxComponentCategoryLabel);
             this.Controls.Add(this.uxComponentCategoryBox);
             this.Controls.Add(this.uxManufacturerLabel);
-            this.Controls.Add(this.uxManufacturerBox);
             this.Controls.Add(this.uxModelNumberLabel);
             this.Controls.Add(this.uxModelNumberBox);
             this.Controls.Add(this.uxComponentNameLabel);
@@ -535,7 +541,6 @@ namespace FinalProjectView
         private System.Windows.Forms.Label uxModelNumberLabel;
         private System.Windows.Forms.TextBox uxModelNumberBox;
         private System.Windows.Forms.Label uxManufacturerLabel;
-        private System.Windows.Forms.TextBox uxManufacturerBox;
         private System.Windows.Forms.Label uxComponentCategoryLabel;
         private System.Windows.Forms.TextBox uxComponentCategoryBox;
         private System.Windows.Forms.Label uxMSRPLabel;
@@ -547,7 +552,6 @@ namespace FinalProjectView
         private System.Windows.Forms.TextBox uxCityNameBox;
         private System.Windows.Forms.Button uxAddCityButton;
         private System.Windows.Forms.Label uxStateNameLabel;
-        private System.Windows.Forms.TextBox uxStateNameBox;
         private System.Windows.Forms.Label uxStoreCityLabel;
         private System.Windows.Forms.TextBox uxStoreCityBox;
         private System.Windows.Forms.Label uxZipCodeLabel;
@@ -569,6 +573,8 @@ namespace FinalProjectView
         private System.Windows.Forms.Button uxComponentStorefrontButton;
         private System.Windows.Forms.CheckBox uxInStockCheckBox;
         private System.Windows.Forms.Label uxStoreStateNameLabel;
-        private System.Windows.Forms.TextBox uxStoreStateBox;
+        private System.Windows.Forms.ComboBox uxManufacturerPicker;
+        private System.Windows.Forms.ComboBox uxCityStatePicker;
+        private System.Windows.Forms.ComboBox uxStoreStatePicker;
     }
 }

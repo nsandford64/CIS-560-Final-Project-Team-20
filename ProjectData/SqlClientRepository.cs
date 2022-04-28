@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ProjectData
 {
-    public class SqlComponentRepository
+    public class SqlClientRepository
     {
         private readonly SqlCommandExecutor executor;
 
-        public SqlComponentRepository(string connectionString)
+        public SqlClientRepository(string connectionString)
         {
             executor = new SqlCommandExecutor(connectionString);
         }

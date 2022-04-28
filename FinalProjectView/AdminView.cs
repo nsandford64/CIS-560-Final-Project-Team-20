@@ -16,12 +16,21 @@ namespace FinalProjectView
 
         List<Control> activeControls = new List<Control>();
 
+        private List<string> manufacturerList;
+        private List<string> stateList;
+
         private AdminState state = AdminState.NotAdding;
 
         public AdminView(ViewController controller)
         {
             c = controller;
             InitializeComponent();
+            manufacturerList = c.GetManufacturerNames();
+            stateList = c.GetStateNames();
+
+            uxCityStatePicker.DataSource = stateList;
+            uxStoreStatePicker.DataSource = stateList;
+            uxManufacturerPicker.DataSource = manufacturerList;
         }
 
         public void ChangeAdminState(AdminState s)
@@ -41,8 +50,8 @@ namespace FinalProjectView
                 uxModelNumberLabel.Enabled = true;
                 activeControls.Add(uxModelNumberLabel);
 
-                uxManufacturerBox.Enabled = true;
-                activeControls.Add(uxManufacturerBox);
+                uxManufacturerPicker.Enabled = true;
+                activeControls.Add(uxManufacturerPicker);
 
                 uxManufacturerLabel.Enabled = true;
                 activeControls.Add(uxManufacturerLabel);
@@ -73,8 +82,8 @@ namespace FinalProjectView
             }
             if(s == AdminState.Cities && state != s)
             {
-                uxStateNameBox.Enabled = true;
-                activeControls.Add(uxStateNameBox);
+                uxCityStatePicker.Enabled = true;
+                activeControls.Add(uxCityStatePicker);
 
                 uxStateNameLabel.Enabled = true;
                 activeControls.Add(uxStateNameLabel);
@@ -116,8 +125,8 @@ namespace FinalProjectView
                 uxStoreStateNameLabel.Enabled = true;
                 activeControls.Add(uxStoreStateNameLabel);
 
-                uxStoreStateBox.Enabled = true;
-                activeControls.Add(uxStoreStateBox);
+                uxStoreStatePicker.Enabled = true;
+                activeControls.Add(uxStoreStatePicker);
 
                 state = s;
             }
@@ -202,7 +211,7 @@ namespace FinalProjectView
             if (state == AdminState.Component)
             {
                 if (uxComponentNameBox.Text == "" || uxModelNumberBox.Text == "" ||
-                    uxManufacturerBox.Text == "" || uxComponentCategoryBox.Text == "" ||
+                    /*uxManufacturerBox.Text == "" || */uxComponentCategoryBox.Text == "" ||
                     uxMSRPBox.Text == "")
                 {
                     uxErrorLabel.Text = "ERROR IN COMPONENTS!";
@@ -211,7 +220,7 @@ namespace FinalProjectView
                 {
                     input.Add(uxComponentNameBox.Text);
                     input.Add(uxModelNumberBox.Text);
-                    input.Add(uxManufacturerBox.Text);
+                    input.Add(uxManufacturerPicker.Text);
                     input.Add(uxComponentCategoryBox.Text);
                     input.Add(uxMSRPBox.Text);
                     c.InsertData(input, AdminState.Component);
@@ -219,14 +228,14 @@ namespace FinalProjectView
             }
             if (state == AdminState.Cities)
             {
-                if(uxCityNameBox.Text == "" || uxStateNameBox.Text == "")
+                if(uxCityNameBox.Text == "" /*|| uxStateNameBox.Text == ""*/)
                 {
                     uxErrorLabel.Text = "ERROR IN CITIES!";
                 }
                 else
                 {
                     input.Add(uxCityNameBox.Text);
-                    input.Add(uxStateNameBox.Text);
+                    input.Add(uxCityStatePicker.Text);
                     c.InsertData(input, AdminState.Cities);
                 } 
             }
@@ -240,12 +249,14 @@ namespace FinalProjectView
                 {
                     input.Add(uxManufacturerNameBox.Text);
                     c.InsertData(input, AdminState.Manufacturer);
+                    manufacturerList = c.GetManufacturerNames();
+                    uxManufacturerPicker.DataSource = manufacturerList;
                 }
             }
             if (state == AdminState.Storefront)
             {
                 if(uxStoreNameBox.Text == "" || uxStoreAddressBox.Text == "" ||
-                    uxZipCodeBox.Text == "" || uxStoreCityBox.Text == "" || uxStoreStateBox.Text == "")
+                    uxZipCodeBox.Text == "" || uxStoreCityBox.Text == "" /*|| uxStoreStateBox.Text == ""*/)
                 {
                     uxErrorLabel.Text = "ERROR IN STOREFRONT!";
                 }
@@ -255,7 +266,7 @@ namespace FinalProjectView
                     input.Add(uxStoreAddressBox.Text);
                     input.Add(uxZipCodeBox.Text);
                     input.Add(uxStoreCityBox.Text);
-                    input.Add(uxStoreStateBox.Text);
+                    input.Add(uxStoreStatePicker.Text);
                     c.InsertData(input, AdminState.Storefront);
                 }
             }

@@ -18,6 +18,18 @@ namespace ProjectData
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        public List<string> GetManufacturerNames()
+        {
+            var d = new GetManufacturerNamesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
+        public List<string> GetStateNames()
+        {
+            var d = new GetStateNamesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
         public Component InsertComponent(List<string> data)
         {
             var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));

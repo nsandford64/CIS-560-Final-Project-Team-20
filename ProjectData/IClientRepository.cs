@@ -7,7 +7,7 @@ using ProjectData.Models;
 
 namespace ProjectData
 {
-    public interface IComponentRepository
+    public interface IClientRepository
     {
         List<Component> GetComponents(string componentName);
 

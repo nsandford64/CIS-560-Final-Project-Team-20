@@ -44,13 +44,15 @@
   <ItemGroup>
     <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDataDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetManufacturerNamesDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetStateNamesDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertCityDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertComponentDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertComponentStorefrontDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertManufacturerDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
     <Compile Include="IAdminRepository.cs" />
-    <Compile Include="IComponentRepository.cs" />
+    <Compile Include="IClientRepository.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Component.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
@@ -59,7 +61,7 @@
     <Compile Include="Models\Storefront.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlAdminRepository.cs" />
-    <Compile Include="SqlComponentRepository.cs" />
+    <Compile Include="SqlClientRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
@@ -77,6 +79,7 @@
     <Content Include="Sql\Data\InsertStorefront.sql" />
     <Content Include="Sql\Procedures\HolyGrailQuery.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetManufacturerNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertCity.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertComponent.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertComponentStorefront.sql" />

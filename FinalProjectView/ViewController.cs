@@ -13,7 +13,7 @@ namespace FinalProjectView
 
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=partfinder;Integrated Security=SSPI;";
 
-        SqlComponentRepository componentRepo = new SqlComponentRepository(connectionString);
+        SqlClientRepository componentRepo = new SqlClientRepository(connectionString);
         SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
         
         private ClientView c;
@@ -45,6 +45,16 @@ namespace FinalProjectView
         public List<Component> GetDataWithParameters(List<string> parameters)
         {
             return componentRepo.GetComponents(parameters);
+        }
+
+        public List<string> GetManufacturerNames()
+        {
+            return adminRepo.GetManufacturerNames();
+        }
+
+        public List<string> GetStateNames()
+        {
+            return adminRepo.GetStateNames();
         }
 
         public List<Component> GetData(string name)
