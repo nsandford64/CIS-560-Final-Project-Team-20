@@ -47,13 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminState.cs" />
-    <Compile Include="AdminView.cs">
+    <Compile Include="AdminGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminView.Designer.cs">
-      <DependentUpon>AdminView.cs</DependentUpon>
+    <Compile Include="AdminGroup.Designer.cs">
+      <DependentUpon>AdminGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminState.cs" />
     <Compile Include="ClientView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,9 +62,45 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubViews\AddCityView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\AddCityView.Designer.cs">
+      <DependentUpon>AddCityView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\AddComponentStorefrontView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\AddComponentStorefrontView.Designer.cs">
+      <DependentUpon>AddComponentStorefrontView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\AddComponentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\AddComponentView.Designer.cs">
+      <DependentUpon>AddComponentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\AddManufacturerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\AddManufacturerView.Designer.cs">
+      <DependentUpon>AddManufacturerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\AddStorefrontView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\AddStorefrontView.Designer.cs">
+      <DependentUpon>AddStorefrontView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubViews\UpdateComponentStorefrontForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViews\UpdateComponentStorefrontForm.Designer.cs">
+      <DependentUpon>UpdateComponentStorefrontForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewController.cs" />
-    <EmbeddedResource Include="AdminView.resx">
-      <DependentUpon>AdminView.cs</DependentUpon>
+    <EmbeddedResource Include="AdminGroup.resx">
+      <DependentUpon>AdminGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientView.resx">
       <DependentUpon>ClientView.cs</DependentUpon>
@@ -79,6 +115,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubViews\AddCityView.resx">
+      <DependentUpon>AddCityView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\AddComponentStorefrontView.resx">
+      <DependentUpon>AddComponentStorefrontView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\AddComponentView.resx">
+      <DependentUpon>AddComponentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\AddManufacturerView.resx">
+      <DependentUpon>AddManufacturerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\AddStorefrontView.resx">
+      <DependentUpon>AddStorefrontView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViews\UpdateComponentStorefrontForm.resx">
+      <DependentUpon>UpdateComponentStorefrontForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

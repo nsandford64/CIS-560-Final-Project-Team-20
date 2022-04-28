@@ -30,6 +30,18 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
+        public List<string> GetCityNames()
+        {
+            var d = new GetCityNamesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
+        public List<string> GetComponentCategories()
+        {
+            var d = new GetComponentCategoriesDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
         public Component InsertComponent(List<string> data)
         {
             var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));

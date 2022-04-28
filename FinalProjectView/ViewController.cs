@@ -17,14 +17,24 @@ namespace FinalProjectView
         SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
         
         private ClientView c;
-        private AdminView a;
+        private AdminGroup a;
+
+        private List<string> manufacturerNames;
+        private List<string> storeNames;
+        private List<string> stateNames;
+        private List<string> cityNames;
+        private List<string> componentCategoryNames;
 
         public ViewController()
         {
-
+            stateNames = adminRepo.GetStateNames();
+            manufacturerNames = adminRepo.GetManufacturerNames();
+            //storeNames = adminRepo.GetStoreNames();
+            cityNames = adminRepo.GetCityNames();
+            componentCategoryNames = adminRepo.GetComponentCategories();
         }
 
-        public void SetViews(ClientView client, AdminView admin)
+        public void SetViews(ClientView client, AdminGroup admin)
         {
             a = admin;
             c = client;
@@ -49,12 +59,32 @@ namespace FinalProjectView
 
         public List<string> GetManufacturerNames()
         {
-            return adminRepo.GetManufacturerNames();
+            return manufacturerNames;
+        }
+
+        public List<string> GetComponentCategoryNames()
+        {
+            return componentCategoryNames;
         }
 
         public List<string> GetStateNames()
         {
-            return adminRepo.GetStateNames();
+            return stateNames;
+        }
+
+        public List<string> GetCityNames()
+        {
+            return cityNames;
+        }
+
+        public void UpdateManufacturerNames()
+        {
+            manufacturerNames = adminRepo.GetManufacturerNames();
+        }
+
+        public void UpdateCityNames()
+        {
+            cityNames = adminRepo.GetCityNames();
         }
 
         public List<Component> GetData(string name)

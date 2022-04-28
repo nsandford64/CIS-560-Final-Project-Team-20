@@ -46,7 +46,6 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("City");
             uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
-            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             List<Component> results = c.GetDataWithParameters(CollectData());
             foreach(Component com in results)
@@ -55,6 +54,7 @@ namespace FinalProjectView
                     com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
                     com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
             }
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
         }
 
@@ -90,11 +90,6 @@ namespace FinalProjectView
                 uxComponentCategoryPicker.DataSource = ComponentCategories;
                 set = false;
             }
-        }
-
-        private void uxStorefrontBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void uxComponentPropertyCheckBox_CheckedChanged(object sender, EventArgs e)

@@ -19,9 +19,9 @@ namespace FinalProjectView
 
 
             ViewController vc = new ViewController();
-            AdminView av = new AdminView(vc);
             ClientView cv = new ClientView(vc);
-            vc.SetViews(cv, av);
+            AdminGroup ag = new AdminGroup(vc);
+            vc.SetViews(cv, ag);
 
             Application.Run(cv);
         }

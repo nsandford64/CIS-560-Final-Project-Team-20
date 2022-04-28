@@ -297,6 +297,8 @@ namespace FinalProjectView
             this.Controls.Add(this.uxStateLabel);
             this.Controls.Add(this.uxStatePicker);
             this.Controls.Add(this.uxAdminButton);
+            this.MaximumSize = new System.Drawing.Size(1800, 900);
+            this.MinimumSize = new System.Drawing.Size(1800, 900);
             this.Name = "ClientView";
             this.Text = "Form1";
             this.ResumeLayout(false);

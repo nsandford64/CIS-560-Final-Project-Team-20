@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\GetCityNamesDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetComponentCategoriesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDataDataDelegate.cs" />
     <Compile Include="DataDelegates\GetManufacturerNamesDataDelegate.cs" />
@@ -70,14 +72,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sql\Data\InsertCities.sql" />
-    <Content Include="Sql\Data\InsertComponentCategory.sql" />
-    <Content Include="Sql\Data\InsertComponents.sql" />
-    <Content Include="Sql\Data\InsertComponentStorefront.sql" />
-    <Content Include="Sql\Data\InsertManufacturer.sql" />
-    <Content Include="Sql\Data\InsertStates.sql" />
-    <Content Include="Sql\Data\InsertStorefront.sql" />
+    <Content Include="Sql\Data\PopulateCities.sql" />
+    <Content Include="Sql\Data\PopulateComponentCategory.sql" />
+    <Content Include="Sql\Data\PopulateComponents.sql" />
+    <Content Include="Sql\Data\PopulateComponentStorefront.sql" />
+    <Content Include="Sql\Data\PopulateManufacturer.sql" />
+    <Content Include="Sql\Data\PopulateStates.sql" />
+    <Content Include="Sql\Data\PopulateStorefront.sql" />
     <Content Include="Sql\Procedures\HolyGrailQuery.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetCityNames.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetComponentCategoryNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetManufacturerNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertCity.sql" />
