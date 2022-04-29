@@ -36,6 +36,12 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
+        public List<string> GetCityNamesByState(string state)
+        {
+            var d = new GetCitiesByStateDataDelegate(state);
+            return executor.ExecuteReader(d);
+        }
+
         public List<string> GetComponentCategories()
         {
             var d = new GetComponentCategoriesDataDelegate();

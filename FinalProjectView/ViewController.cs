@@ -77,6 +77,11 @@ namespace FinalProjectView
             return cityNames;
         }
 
+        public List<string> GetCitiesByState(string state)
+        {
+            return adminRepo.GetCityNamesByState(state);
+        }
+
         public void UpdateManufacturerNames()
         {
             manufacturerNames = adminRepo.GetManufacturerNames();
@@ -86,6 +91,8 @@ namespace FinalProjectView
         {
             cityNames = adminRepo.GetCityNames();
         }
+
+        public List<>
 
         public List<Component> GetData(string name)
         {

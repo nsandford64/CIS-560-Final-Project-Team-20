@@ -46,7 +46,7 @@ namespace FinalProjectView.SubViews
             // uxStoreCityNamePicker
             // 
             this.uxStoreCityNamePicker.FormattingEnabled = true;
-            this.uxStoreCityNamePicker.Location = new System.Drawing.Point(143, 160);
+            this.uxStoreCityNamePicker.Location = new System.Drawing.Point(143, 198);
             this.uxStoreCityNamePicker.Name = "uxStoreCityNamePicker";
             this.uxStoreCityNamePicker.Size = new System.Drawing.Size(192, 24);
             this.uxStoreCityNamePicker.TabIndex = 59;
@@ -55,15 +55,16 @@ namespace FinalProjectView.SubViews
             // 
             this.uxStoreStatePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxStoreStatePicker.FormattingEnabled = true;
-            this.uxStoreStatePicker.Location = new System.Drawing.Point(143, 201);
+            this.uxStoreStatePicker.Location = new System.Drawing.Point(143, 154);
             this.uxStoreStatePicker.Name = "uxStoreStatePicker";
             this.uxStoreStatePicker.Size = new System.Drawing.Size(192, 24);
             this.uxStoreStatePicker.TabIndex = 58;
+            this.uxStoreStatePicker.SelectedIndexChanged += new System.EventHandler(this.uxStoreStatePicker_SelectedIndexChanged);
             // 
             // uxStoreStateNameLabel
             // 
             this.uxStoreStateNameLabel.AutoSize = true;
-            this.uxStoreStateNameLabel.Location = new System.Drawing.Point(45, 208);
+            this.uxStoreStateNameLabel.Location = new System.Drawing.Point(45, 161);
             this.uxStoreStateNameLabel.Name = "uxStoreStateNameLabel";
             this.uxStoreStateNameLabel.Size = new System.Drawing.Size(86, 17);
             this.uxStoreStateNameLabel.TabIndex = 57;
@@ -72,7 +73,7 @@ namespace FinalProjectView.SubViews
             // uxStoreCityLabel
             // 
             this.uxStoreCityLabel.AutoSize = true;
-            this.uxStoreCityLabel.Location = new System.Drawing.Point(56, 163);
+            this.uxStoreCityLabel.Location = new System.Drawing.Point(56, 201);
             this.uxStoreCityLabel.Name = "uxStoreCityLabel";
             this.uxStoreCityLabel.Size = new System.Drawing.Size(76, 17);
             this.uxStoreCityLabel.TabIndex = 56;

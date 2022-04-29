@@ -149,5 +149,17 @@ namespace FinalProjectView
                 uxStorefrontLabel.Enabled = false;
             }
         }
+
+        private void uxAggregateStockValueButton_Click(object sender, EventArgs e)
+        {
+            if(uxAggregatePriceBox.Text == "")
+            {
+
+            }
+            else
+            {
+                c.
+            }
+        }
     }
 }

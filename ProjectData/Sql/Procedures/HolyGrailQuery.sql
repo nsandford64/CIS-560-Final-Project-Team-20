@@ -11,7 +11,7 @@ CREATE OR ALTER PROCEDURE PartFinder.GetData
 AS
 
 
-SELECT C.ComponentName, C.ModelNumber, M.ManufacturerName, CC.ComponentCategoryID, CS.Price, CS.InStock, S.StoreName, S.StoreAddress, S.ZipCode, CIT.CityName, ST.StateName
+SELECT C.ComponentName, C.ModelNumber, M.ManufacturerName, CC.ComponentCategoryID, C.MSRP, CS.Price, CS.InStock, S.StoreName, S.StoreAddress, S.ZipCode, CIT.CityName, ST.StateName
 FROM PartFinder.ComponentStorefront CS
 INNER JOIN PartFinder.Component C ON C.ComponentID = CS.ComponentID
 INNER JOIN PartFinder.Manufacturer M ON M.ManufacturerID = C.ManufacturerID

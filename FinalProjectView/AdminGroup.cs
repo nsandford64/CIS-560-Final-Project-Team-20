@@ -72,7 +72,7 @@ namespace FinalProjectView
 
         private void uxAddStorefrontButton_Click(object sender, EventArgs e)
         {
-            using (AddStorefrontView view = new AddStorefrontView())
+            using (AddStorefrontView view = new AddStorefrontView(this))
             {
                 view.SetStates(c.GetStateNames());
                 view.SetCities(c.GetCityNames());
@@ -89,9 +89,26 @@ namespace FinalProjectView
             }
         }
 
+        public List<string> GetPossibleCities(string state)
+        {
+            return c.GetCitiesByState(state);
+        }
+
         private void uxAddComponentStorefrontButton_Click(object sender, EventArgs e)
         {
-
+            using (AddComponentStorefrontView view = new AddComponentStorefrontView())
+            {
+                if (view.ShowDialog() == DialogResult.OK)
+                {
+                    List<string> input = new List<string>();
+                    input.Add(view.ModelNumber);
+                    input.Add(view.StoreAddress);
+                    input.Add(view.ZipCode);
+                    input.Add(view.Price);
+                    input.Add(view.InStock);
+                    c.InsertData(input, AdminState.Storefront);
+                }
+            }
         }
 
         private void AdminGroup_FormClosed(object sender, FormClosedEventArgs e)

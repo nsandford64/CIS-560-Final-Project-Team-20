@@ -52,6 +52,8 @@ namespace FinalProjectView
             this.uxMaxPriceLabel = new System.Windows.Forms.Label();
             this.uxMinPriceBox = new System.Windows.Forms.TextBox();
             this.uxMaxPriceBox = new System.Windows.Forms.TextBox();
+            this.uxAggregateStockValueButton = new System.Windows.Forms.Button();
+            this.uxAggregatePriceBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -269,11 +271,30 @@ namespace FinalProjectView
             this.uxMaxPriceBox.Size = new System.Drawing.Size(100, 22);
             this.uxMaxPriceBox.TabIndex = 25;
             // 
+            // uxAggregateStockValueButton
+            // 
+            this.uxAggregateStockValueButton.Location = new System.Drawing.Point(45, 629);
+            this.uxAggregateStockValueButton.Name = "uxAggregateStockValueButton";
+            this.uxAggregateStockValueButton.Size = new System.Drawing.Size(129, 96);
+            this.uxAggregateStockValueButton.TabIndex = 26;
+            this.uxAggregateStockValueButton.Text = "Aggregate In Stock Components By Price";
+            this.uxAggregateStockValueButton.UseVisualStyleBackColor = true;
+            this.uxAggregateStockValueButton.Click += new System.EventHandler(this.uxAggregateStockValueButton_Click);
+            // 
+            // uxAggregatePriceBox
+            // 
+            this.uxAggregatePriceBox.Location = new System.Drawing.Point(59, 731);
+            this.uxAggregatePriceBox.Name = "uxAggregatePriceBox";
+            this.uxAggregatePriceBox.Size = new System.Drawing.Size(100, 22);
+            this.uxAggregatePriceBox.TabIndex = 27;
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 853);
+            this.Controls.Add(this.uxAggregatePriceBox);
+            this.Controls.Add(this.uxAggregateStockValueButton);
             this.Controls.Add(this.uxMaxPriceBox);
             this.Controls.Add(this.uxMinPriceBox);
             this.Controls.Add(this.uxMaxPriceLabel);
@@ -331,6 +352,8 @@ namespace FinalProjectView
         private System.Windows.Forms.Label uxMaxPriceLabel;
         private System.Windows.Forms.TextBox uxMinPriceBox;
         private System.Windows.Forms.TextBox uxMaxPriceBox;
+        private System.Windows.Forms.Button uxAggregateStockValueButton;
+        private System.Windows.Forms.TextBox uxAggregatePriceBox;
     }
 }
 

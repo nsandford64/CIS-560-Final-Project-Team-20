@@ -12,8 +12,10 @@ namespace FinalProjectView.SubViews
 {
     public partial class AddStorefrontView : Form
     {
-        public AddStorefrontView()
+        private AdminGroup ag;
+        public AddStorefrontView(AdminGroup ag)
         {
+            this.ag = ag;
             InitializeComponent();
         }
 
@@ -85,6 +87,11 @@ namespace FinalProjectView.SubViews
             {
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void uxStoreStatePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxStoreCityNamePicker.DataSource = ag.GetPossibleCities(uxStoreStatePicker.Text);
         }
     }
 }
