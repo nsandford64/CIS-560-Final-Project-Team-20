@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\AggregateInStockRatioDataDelegate.cs" />
+    <Compile Include="DataDelegates\AggregateMSRPDataDelegate.cs" />
+    <Compile Include="DataDelegates\AggregateStockDataDelegate.cs" />
+    <Compile Include="DataDelegates\AggregateStoreComponentsByStateDataDelegate.cs" />
     <Compile Include="DataDelegates\GetCitiesByStateDataDelegate.cs" />
     <Compile Include="DataDelegates\GetCityNamesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetComponentCategoriesDataDelegate.cs" />
@@ -56,7 +60,10 @@
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
     <Compile Include="IAdminRepository.cs" />
     <Compile Include="IClientRepository.cs" />
+    <Compile Include="Models\AggregateInStockRatioModel.cs" />
+    <Compile Include="Models\AggregateMSRPModel.cs" />
     <Compile Include="Models\AggregateStockModel.cs" />
+    <Compile Include="Models\AggregateStoreComponentsByStateModel.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Component.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
@@ -82,6 +89,12 @@
     <Content Include="Sql\Data\PopulateStates.sql" />
     <Content Include="Sql\Data\PopulateStorefront.sql" />
     <Content Include="Sql\Procedures\HolyGrailQuery.sql" />
+    <Content Include="Sql\Procedures\PartFinder.AggregateCompareMSRP.sql" />
+    <Content Include="Sql\Procedures\MostExpensiveComponentsInAStore.sql" />
+    <Content Include="Sql\Procedures\NumberOfComponentsFromEachManufacturer.sql" />
+    <Content Include="Sql\Procedures\PartFinder.AggregateInStockRatio.sql" />
+    <Content Include="Sql\Procedures\PartFinder.AggregateStockValues.sql" />
+    <Content Include="Sql\Procedures\PartFinder.AggregateStoreComponentsByState.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetCitiesByState.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetCityNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponentCategoryNames.sql" />

@@ -24,20 +24,27 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
-        public List<Component> GetComponentsByName(string componentName)
+        public List<AggregateStockModel> AggregateStockValues(decimal value)
         {
-            var d = new GetComponentsDataDelegate(componentName);
+            var d = new AggregateStockDataDelegate(value);
             return executor.ExecuteReader(d);
         }
 
-        public List<Component> GetComponentsByModelNo(string modelNo)
+        public List<AggregateMSRPModel> AggregateCompareMSRP()
         {
-            var d = new GetComponentsDataDelegate(modelNo);
+            var d = new AggregateMSRPDataDelegate();
             return executor.ExecuteReader(d);
         }
-        public List<Component> GetComponentsByModelNoAndName(string modelNo, string componentName)
+
+        public List<AggregateStoreComponentsByStateModel> AggregateStoreComponents()
         {
-            var d = new GetComponentsDataDelegate(modelNo);
+            var d = new AggregateStoreComponentsByStateDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
+        public List<AggregateInStockRatioModel> AggregateInStockRatio()
+        {
+            var d = new AggregateInStockRatioDataDelegate();
             return executor.ExecuteReader(d);
         }
     }

@@ -12,4 +12,5 @@ SELECT
 FROM PartFinder.Storefront SF
 	INNER JOIN PartFinder.ComponentStorefront CS ON SF.StoreID = CS.StoreID
 GROUP BY StoreName, StoreAddress, ZipCode
-HAVING SUM(IIF(CS.InStock = 1, CS.Price, 0.00)) >= @Value
+HAVING SUM(IIF(CS.InStock = 1, CS.Price, 0.00)) >= @Value;
+GO

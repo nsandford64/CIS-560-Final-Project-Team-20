@@ -54,6 +54,9 @@ namespace FinalProjectView
             this.uxMaxPriceBox = new System.Windows.Forms.TextBox();
             this.uxAggregateStockValueButton = new System.Windows.Forms.Button();
             this.uxAggregatePriceBox = new System.Windows.Forms.TextBox();
+            this.uxAggregateCompareMSRPButton = new System.Windows.Forms.Button();
+            this.uxAggregateStoreRatioButton = new System.Windows.Forms.Button();
+            this.uxAggregateStoreComponentsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -288,11 +291,44 @@ namespace FinalProjectView
             this.uxAggregatePriceBox.Size = new System.Drawing.Size(100, 22);
             this.uxAggregatePriceBox.TabIndex = 27;
             // 
+            // uxAggregateCompareMSRPButton
+            // 
+            this.uxAggregateCompareMSRPButton.Location = new System.Drawing.Point(231, 629);
+            this.uxAggregateCompareMSRPButton.Name = "uxAggregateCompareMSRPButton";
+            this.uxAggregateCompareMSRPButton.Size = new System.Drawing.Size(129, 96);
+            this.uxAggregateCompareMSRPButton.TabIndex = 28;
+            this.uxAggregateCompareMSRPButton.Text = "Get Number of Components Above MSRP";
+            this.uxAggregateCompareMSRPButton.UseVisualStyleBackColor = true;
+            this.uxAggregateCompareMSRPButton.Click += new System.EventHandler(this.uxAggregateCompareMSRPButton_Click);
+            // 
+            // uxAggregateStoreRatioButton
+            // 
+            this.uxAggregateStoreRatioButton.Location = new System.Drawing.Point(45, 759);
+            this.uxAggregateStoreRatioButton.Name = "uxAggregateStoreRatioButton";
+            this.uxAggregateStoreRatioButton.Size = new System.Drawing.Size(129, 96);
+            this.uxAggregateStoreRatioButton.TabIndex = 29;
+            this.uxAggregateStoreRatioButton.Text = "Get Number of Stores with a 50% In Stock Ratio";
+            this.uxAggregateStoreRatioButton.UseVisualStyleBackColor = true;
+            this.uxAggregateStoreRatioButton.Click += new System.EventHandler(this.uxAggregateStoreRatioButton_Click);
+            // 
+            // uxAggregateStoreComponentsButton
+            // 
+            this.uxAggregateStoreComponentsButton.Location = new System.Drawing.Point(231, 759);
+            this.uxAggregateStoreComponentsButton.Name = "uxAggregateStoreComponentsButton";
+            this.uxAggregateStoreComponentsButton.Size = new System.Drawing.Size(129, 96);
+            this.uxAggregateStoreComponentsButton.TabIndex = 30;
+            this.uxAggregateStoreComponentsButton.Text = "Get Number of Stores and Components in Each State";
+            this.uxAggregateStoreComponentsButton.UseVisualStyleBackColor = true;
+            this.uxAggregateStoreComponentsButton.Click += new System.EventHandler(this.uxAggregateStoreComponentsButton_Click);
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 853);
+            this.Controls.Add(this.uxAggregateStoreComponentsButton);
+            this.Controls.Add(this.uxAggregateStoreRatioButton);
+            this.Controls.Add(this.uxAggregateCompareMSRPButton);
             this.Controls.Add(this.uxAggregatePriceBox);
             this.Controls.Add(this.uxAggregateStockValueButton);
             this.Controls.Add(this.uxMaxPriceBox);
@@ -354,6 +390,9 @@ namespace FinalProjectView
         private System.Windows.Forms.TextBox uxMaxPriceBox;
         private System.Windows.Forms.Button uxAggregateStockValueButton;
         private System.Windows.Forms.TextBox uxAggregatePriceBox;
+        private System.Windows.Forms.Button uxAggregateCompareMSRPButton;
+        private System.Windows.Forms.Button uxAggregateStoreRatioButton;
+        private System.Windows.Forms.Button uxAggregateStoreComponentsButton;
     }
 }
 

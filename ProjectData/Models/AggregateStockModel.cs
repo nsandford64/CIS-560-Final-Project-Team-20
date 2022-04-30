@@ -14,10 +14,20 @@ namespace ProjectData.Models
 
         public int ZipCode;
 
-        public int TotalValue;
+        public decimal TotalValue;
 
         public int NumberInStock;
 
-        public int AveragePrice;
+        public decimal AveragePrice;
+
+        public AggregateStockModel(string name, string address, int zip, decimal total, int num, decimal avg)
+        {
+            StoreName = name;
+            StoreAddress = address;
+            ZipCode = zip;
+            TotalValue = total;
+            NumberInStock = num;
+            AveragePrice = avg;
+        }
     }
 }

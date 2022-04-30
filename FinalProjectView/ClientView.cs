@@ -152,14 +152,34 @@ namespace FinalProjectView
 
         private void uxAggregateStockValueButton_Click(object sender, EventArgs e)
         {
-            if(uxAggregatePriceBox.Text == "")
+            decimal input;
+            if(uxAggregatePriceBox.Text == "" || !(decimal.TryParse(uxAggregatePriceBox.Text, out input)))
             {
 
             }
             else
             {
-                c.
+                var testing = c.AggregateStockData(input);
+                MessageBox.Show(testing[0].StoreAddress);
             }
+        }
+
+        private void uxAggregateCompareMSRPButton_Click(object sender, EventArgs e)
+        {
+            var testing = c.AggregateCompareMSRPData();
+            MessageBox.Show(testing[0].ComponentCategoryName);
+        }
+
+        private void uxAggregateStoreRatioButton_Click(object sender, EventArgs e)
+        {
+            var testing = c.AggregateStockRatioData();
+            MessageBox.Show(testing[0].StoreName);
+        }
+
+        private void uxAggregateStoreComponentsButton_Click(object sender, EventArgs e)
+        {
+            var testing = c.AggregateStoreComponentData();
+            MessageBox.Show(testing[0].ComponentCategoryName);
         }
     }
 }

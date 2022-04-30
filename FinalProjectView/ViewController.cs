@@ -13,7 +13,7 @@ namespace FinalProjectView
 
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=partfinder;Integrated Security=SSPI;";
 
-        SqlClientRepository componentRepo = new SqlClientRepository(connectionString);
+        SqlClientRepository clientRepo = new SqlClientRepository(connectionString);
         SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
         
         private ClientView c;
@@ -54,7 +54,7 @@ namespace FinalProjectView
 
         public List<Component> GetDataWithParameters(List<string> parameters)
         {
-            return componentRepo.GetComponents(parameters);
+            return clientRepo.GetComponents(parameters);
         }
 
         public List<string> GetManufacturerNames()
@@ -92,11 +92,24 @@ namespace FinalProjectView
             cityNames = adminRepo.GetCityNames();
         }
 
-        public List<>
-
-        public List<Component> GetData(string name)
+        public List<AggregateStockModel> AggregateStockData(decimal value)
         {
-            return componentRepo.GetComponentsByName(name);
+            return clientRepo.AggregateStockValues(value);
+        }
+
+        public List<AggregateMSRPModel> AggregateCompareMSRPData()
+        {
+            return clientRepo.AggregateCompareMSRP();
+        }
+
+        public List<AggregateInStockRatioModel> AggregateStockRatioData()
+        {
+            return clientRepo.AggregateInStockRatio();
+        }
+
+        public List<AggregateStoreComponentsByStateModel> AggregateStoreComponentData()
+        {
+            return clientRepo.AggregateStoreComponents();
         }
 
         public void InsertData(List<string> data, AdminState state)
