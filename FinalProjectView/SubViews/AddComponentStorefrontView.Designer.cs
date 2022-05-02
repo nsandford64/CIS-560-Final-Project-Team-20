@@ -45,7 +45,7 @@ namespace FinalProjectView.SubViews
             // uxInStockCheckBox
             // 
             this.uxInStockCheckBox.AutoSize = true;
-            this.uxInStockCheckBox.Location = new System.Drawing.Point(152, 210);
+            this.uxInStockCheckBox.Location = new System.Drawing.Point(151, 254);
             this.uxInStockCheckBox.Name = "uxInStockCheckBox";
             this.uxInStockCheckBox.Size = new System.Drawing.Size(88, 21);
             this.uxInStockCheckBox.TabIndex = 52;
@@ -55,7 +55,7 @@ namespace FinalProjectView.SubViews
             // uxPriceComboLabel
             // 
             this.uxPriceComboLabel.AutoSize = true;
-            this.uxPriceComboLabel.Location = new System.Drawing.Point(100, 173);
+            this.uxPriceComboLabel.Location = new System.Drawing.Point(99, 217);
             this.uxPriceComboLabel.Name = "uxPriceComboLabel";
             this.uxPriceComboLabel.Size = new System.Drawing.Size(44, 17);
             this.uxPriceComboLabel.TabIndex = 51;
@@ -63,7 +63,7 @@ namespace FinalProjectView.SubViews
             // 
             // uxPriceComboBox
             // 
-            this.uxPriceComboBox.Location = new System.Drawing.Point(152, 168);
+            this.uxPriceComboBox.Location = new System.Drawing.Point(151, 212);
             this.uxPriceComboBox.Name = "uxPriceComboBox";
             this.uxPriceComboBox.Size = new System.Drawing.Size(173, 22);
             this.uxPriceComboBox.TabIndex = 50;
@@ -71,7 +71,7 @@ namespace FinalProjectView.SubViews
             // uxZipCodeComboLabel
             // 
             this.uxZipCodeComboLabel.AutoSize = true;
-            this.uxZipCodeComboLabel.Location = new System.Drawing.Point(75, 124);
+            this.uxZipCodeComboLabel.Location = new System.Drawing.Point(74, 168);
             this.uxZipCodeComboLabel.Name = "uxZipCodeComboLabel";
             this.uxZipCodeComboLabel.Size = new System.Drawing.Size(69, 17);
             this.uxZipCodeComboLabel.TabIndex = 49;
@@ -79,7 +79,7 @@ namespace FinalProjectView.SubViews
             // 
             // uxZipCodeComboBox
             // 
-            this.uxZipCodeComboBox.Location = new System.Drawing.Point(152, 119);
+            this.uxZipCodeComboBox.Location = new System.Drawing.Point(151, 163);
             this.uxZipCodeComboBox.Name = "uxZipCodeComboBox";
             this.uxZipCodeComboBox.Size = new System.Drawing.Size(173, 22);
             this.uxZipCodeComboBox.TabIndex = 48;
@@ -87,7 +87,7 @@ namespace FinalProjectView.SubViews
             // uxStoreAddressComboLabel
             // 
             this.uxStoreAddressComboLabel.AutoSize = true;
-            this.uxStoreAddressComboLabel.Location = new System.Drawing.Point(42, 76);
+            this.uxStoreAddressComboLabel.Location = new System.Drawing.Point(41, 120);
             this.uxStoreAddressComboLabel.Name = "uxStoreAddressComboLabel";
             this.uxStoreAddressComboLabel.Size = new System.Drawing.Size(102, 17);
             this.uxStoreAddressComboLabel.TabIndex = 47;
@@ -95,7 +95,7 @@ namespace FinalProjectView.SubViews
             // 
             // uxStoreAddressComboBox
             // 
-            this.uxStoreAddressComboBox.Location = new System.Drawing.Point(152, 71);
+            this.uxStoreAddressComboBox.Location = new System.Drawing.Point(151, 115);
             this.uxStoreAddressComboBox.Name = "uxStoreAddressComboBox";
             this.uxStoreAddressComboBox.Size = new System.Drawing.Size(173, 22);
             this.uxStoreAddressComboBox.TabIndex = 46;
@@ -103,7 +103,7 @@ namespace FinalProjectView.SubViews
             // uxModelNumberComboLabel
             // 
             this.uxModelNumberComboLabel.AutoSize = true;
-            this.uxModelNumberComboLabel.Location = new System.Drawing.Point(42, 34);
+            this.uxModelNumberComboLabel.Location = new System.Drawing.Point(41, 78);
             this.uxModelNumberComboLabel.Name = "uxModelNumberComboLabel";
             this.uxModelNumberComboLabel.Size = new System.Drawing.Size(104, 17);
             this.uxModelNumberComboLabel.TabIndex = 45;
@@ -111,7 +111,7 @@ namespace FinalProjectView.SubViews
             // 
             // uxModelNumberComboBox
             // 
-            this.uxModelNumberComboBox.Location = new System.Drawing.Point(152, 29);
+            this.uxModelNumberComboBox.Location = new System.Drawing.Point(151, 73);
             this.uxModelNumberComboBox.Name = "uxModelNumberComboBox";
             this.uxModelNumberComboBox.Size = new System.Drawing.Size(173, 22);
             this.uxModelNumberComboBox.TabIndex = 44;

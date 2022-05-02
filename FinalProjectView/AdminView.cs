@@ -102,12 +102,12 @@ namespace FinalProjectView
                 if (view.ShowDialog() == DialogResult.OK)
                 {
                     List<string> input = new List<string>();
-                    input.Add(view.ModelNumber);
                     input.Add(view.StoreAddress);
                     input.Add(view.ZipCode);
+                    input.Add(view.ModelNumber);
                     input.Add(view.Price);
                     input.Add(view.InStock);
-                    controller.InsertData(input, AdminState.Storefront);
+                    controller.InsertData(input, AdminState.ComponentStorefront);
                 }
             }
         }

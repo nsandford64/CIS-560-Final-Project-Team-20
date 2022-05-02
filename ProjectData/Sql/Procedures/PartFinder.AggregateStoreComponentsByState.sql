@@ -1,7 +1,7 @@
 CREATE OR ALTER PROCEDURE PartFinder.AggregateStoreComponentsByState
 AS
 
-SELECT
+SELECT 
 	CC.ComponentCategoryName,
 	S.StateName,
 	C.CityName,
@@ -14,5 +14,5 @@ FROM PartFinder.States S
 	INNER JOIN PartFinder.Component CO ON CO.ComponentID = CS.ComponentID
 	INNER JOIN PartFinder.ComponentCategory CC ON CC.ComponentCategoryID = CO.ComponentCategoryID
 WHERE CS.InStock = 1
-GROUP BY ComponentCategoryName, StateName, CityName;
+GROUP BY StateName, CityName, ComponentCategoryName, SF.StoreID;
 GO
