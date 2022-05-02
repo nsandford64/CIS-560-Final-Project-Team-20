@@ -28,7 +28,8 @@ namespace ProjectData.DataDelegates
             while (reader.Read())
             {
                 results.Add(new AggregateInStockRatioModel(reader.GetString("StoreName"), reader.GetString("StoreAddress"),
-                    reader.GetInt32("ZipCode"), reader.GetInt32("InStock"), reader.GetInt32("StockRatio")));
+                    reader.GetInt32("ZipCode"), reader.GetValue<decimal>("InStock"), reader.GetValue<decimal>("NotInStock"),
+                    reader.GetValue<decimal>("StockRatio")));
             }
             return results;
         }

@@ -12,16 +12,19 @@ namespace FinalProjectView.SubViews
 {
     public partial class AddComponentStorefrontView : Form
     {
-        public AddComponentStorefrontView()
+        private AdminView adminView;
+        public AddComponentStorefrontView(AdminView av)
         {
+            adminView = av;
             InitializeComponent();
+
         }
 
         public string ModelNumber
         {
             get
             {
-                return uxModelNumberComboBox.Text;
+                return uxModelNumberPicker.Text;
             }
         }
 
@@ -29,7 +32,7 @@ namespace FinalProjectView.SubViews
         {
             get
             {
-                return uxStoreAddressComboBox.Text;
+                return uxStoreAddressPicker.Text;
             }
         }
 
@@ -37,7 +40,7 @@ namespace FinalProjectView.SubViews
         {
             get
             {
-                return uxZipCodeComboBox.Text;
+                return uxZipCodePicker.Text;
             }
         }
 

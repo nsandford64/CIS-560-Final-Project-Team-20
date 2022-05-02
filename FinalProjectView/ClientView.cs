@@ -146,12 +146,13 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("Address");
             uxResultsBox.Columns.Add("ZipCode");
             uxResultsBox.Columns.Add("Number In Stock");
+            uxResultsBox.Columns.Add("Number Out Of Stock");
             uxResultsBox.Columns.Add("Stock Ratio");
             
             foreach(AggregateInStockRatioModel model in results)
             {
                 uxResultsBox.Items.Add(new ListViewItem(new string[] { model.StoreName, model.StoreAddress,
-                "" + model.ZipCode, "" + model.InStock, "" + model.StockRatio}));
+                "" + model.ZipCode, "" + model.InStock, "" + model.OutOfStock, "" + model.StockRatio}));
             }
 
             uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);

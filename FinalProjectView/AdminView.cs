@@ -97,7 +97,7 @@ namespace FinalProjectView
 
         private void uxAddComponentStorefrontButton_Click(object sender, EventArgs e)
         {
-            using (AddComponentStorefrontView view = new AddComponentStorefrontView())
+            using (AddComponentStorefrontView view = new AddComponentStorefrontView(this))
             {
                 if (view.ShowDialog() == DialogResult.OK)
                 {
