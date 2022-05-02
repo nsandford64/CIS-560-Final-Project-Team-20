@@ -23,7 +23,7 @@ namespace ProjectData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("Value", value);
+            command.Parameters.AddWithValue("Value", Convert.ToDecimal(value));
         }
 
         public override List<AggregateStockModel> Translate(SqlCommand command, IDataRowReader reader)

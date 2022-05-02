@@ -34,13 +34,13 @@ namespace FinalProjectView.SubViews
             this.uxPriceComboBox = new System.Windows.Forms.TextBox();
             this.uxComponentList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.uxUpdateButton = new System.Windows.Forms.Button();
             this.uxDisplayLabel = new System.Windows.Forms.Label();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // uxInStockCheckBox
@@ -91,6 +91,18 @@ namespace FinalProjectView.SubViews
             // 
             this.columnHeader1.Text = "Component Name";
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Model Number";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Price";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "In Stock";
+            // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Store Address";
@@ -116,18 +128,6 @@ namespace FinalProjectView.SubViews
             this.uxDisplayLabel.Name = "uxDisplayLabel";
             this.uxDisplayLabel.Size = new System.Drawing.Size(0, 17);
             this.uxDisplayLabel.TabIndex = 64;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Model Number";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Price";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "In Stock";
             // 
             // UpdateComponentStorefrontView
             // 

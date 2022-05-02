@@ -1,5 +1,5 @@
 CREATE OR ALTER PROCEDURE PartFinder.AggregateStockValues
-	@Value DECIMAL(5,2)
+	@Value DECIMAL(10,2)
 AS
 
 SELECT 
