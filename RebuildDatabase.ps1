@@ -50,7 +50,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectDat
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertManufacturer.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertStorefront.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.InsertComponentStorefront.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\HolyGrailQuery.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetData.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetManufacturerNames.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetStateNames.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "ProjectData\Sql\Procedures\PartFinder.GetComponentCategoryNames.sql"

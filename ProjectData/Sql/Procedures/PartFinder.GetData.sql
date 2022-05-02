@@ -28,4 +28,5 @@ AND    (C.ComponentName LIKE '%' + @COMPONENT_NAME + '%' OR @COMPONENT_NAME IS N
 AND    (M.ManufacturerName LIKE '%' + @COMPONENT_MANUFACTURER + '%' OR @COMPONENT_MANUFACTURER IS NULL)
 AND    ((CS.Price >= @MIN_PRICE) OR @MIN_PRICE IS NULL)
 AND    ((CS.Price <= @MAX_PRICE) OR @MAX_PRICE IS NULL)
+ORDER BY ComponentName, ManufacturerName, ComponentCategoryID, ZipCode, CityName, StateName; 
 

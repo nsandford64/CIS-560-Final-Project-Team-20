@@ -93,10 +93,8 @@
     <Content Include="Sql\Data\PopulateManufacturer.sql" />
     <Content Include="Sql\Data\PopulateStates.sql" />
     <Content Include="Sql\Data\PopulateStorefront.sql" />
-    <Content Include="Sql\Procedures\HolyGrailQuery.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetData.sql" />
     <Content Include="Sql\Procedures\PartFinder.AggregateCompareMSRP.sql" />
-    <Content Include="Sql\Procedures\MostExpensiveComponentsInAStore.sql" />
-    <Content Include="Sql\Procedures\NumberOfComponentsFromEachManufacturer.sql" />
     <Content Include="Sql\Procedures\PartFinder.AggregateInStockRatio.sql" />
     <Content Include="Sql\Procedures\PartFinder.AggregateStockValues.sql" />
     <Content Include="Sql\Procedures\PartFinder.AggregateStoreComponentsByState.sql" />
