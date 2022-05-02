@@ -55,6 +55,7 @@ namespace FinalProjectView
             this.uxAggregateCompareMSRPButton = new System.Windows.Forms.Button();
             this.uxAggregateStoreRatioButton = new System.Windows.Forms.Button();
             this.uxAggregateStoreComponentsButton = new System.Windows.Forms.Button();
+            this.uxAggregateMinLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -242,13 +243,13 @@ namespace FinalProjectView
             this.uxAggregateStockValueButton.Name = "uxAggregateStockValueButton";
             this.uxAggregateStockValueButton.Size = new System.Drawing.Size(129, 96);
             this.uxAggregateStockValueButton.TabIndex = 26;
-            this.uxAggregateStockValueButton.Text = "Aggregate In Stock Components By Price";
+            this.uxAggregateStockValueButton.Text = "Aggregate Store Stock Value By Minimum Value";
             this.uxAggregateStockValueButton.UseVisualStyleBackColor = true;
             this.uxAggregateStockValueButton.Click += new System.EventHandler(this.uxAggregateStockValueButton_Click);
             // 
             // uxAggregatePriceBox
             // 
-            this.uxAggregatePriceBox.Location = new System.Drawing.Point(83, 631);
+            this.uxAggregatePriceBox.Location = new System.Drawing.Point(98, 631);
             this.uxAggregatePriceBox.Name = "uxAggregatePriceBox";
             this.uxAggregatePriceBox.Size = new System.Drawing.Size(100, 22);
             this.uxAggregatePriceBox.TabIndex = 27;
@@ -259,7 +260,7 @@ namespace FinalProjectView
             this.uxAggregateCompareMSRPButton.Name = "uxAggregateCompareMSRPButton";
             this.uxAggregateCompareMSRPButton.Size = new System.Drawing.Size(129, 96);
             this.uxAggregateCompareMSRPButton.TabIndex = 28;
-            this.uxAggregateCompareMSRPButton.Text = "Get Number of Components Above MSRP";
+            this.uxAggregateCompareMSRPButton.Text = "Get Number of Components Listed Below MSRP";
             this.uxAggregateCompareMSRPButton.UseVisualStyleBackColor = true;
             this.uxAggregateCompareMSRPButton.Click += new System.EventHandler(this.uxAggregateCompareMSRPButton_Click);
             // 
@@ -269,7 +270,7 @@ namespace FinalProjectView
             this.uxAggregateStoreRatioButton.Name = "uxAggregateStoreRatioButton";
             this.uxAggregateStoreRatioButton.Size = new System.Drawing.Size(129, 96);
             this.uxAggregateStoreRatioButton.TabIndex = 29;
-            this.uxAggregateStoreRatioButton.Text = "Get Number of Stores with a 50% In Stock Ratio";
+            this.uxAggregateStoreRatioButton.Text = "Get In Stock Ratios of All Stores";
             this.uxAggregateStoreRatioButton.UseVisualStyleBackColor = true;
             this.uxAggregateStoreRatioButton.Click += new System.EventHandler(this.uxAggregateStoreRatioButton_Click);
             // 
@@ -283,11 +284,21 @@ namespace FinalProjectView
             this.uxAggregateStoreComponentsButton.UseVisualStyleBackColor = true;
             this.uxAggregateStoreComponentsButton.Click += new System.EventHandler(this.uxAggregateStoreComponentsButton_Click);
             // 
+            // uxAggregateMinLabel
+            // 
+            this.uxAggregateMinLabel.AutoSize = true;
+            this.uxAggregateMinLabel.Location = new System.Drawing.Point(23, 634);
+            this.uxAggregateMinLabel.Name = "uxAggregateMinLabel";
+            this.uxAggregateMinLabel.Size = new System.Drawing.Size(74, 17);
+            this.uxAggregateMinLabel.TabIndex = 31;
+            this.uxAggregateMinLabel.Text = "Min Value:";
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 853);
+            this.Controls.Add(this.uxAggregateMinLabel);
             this.Controls.Add(this.uxAggregateStoreComponentsButton);
             this.Controls.Add(this.uxAggregateStoreRatioButton);
             this.Controls.Add(this.uxAggregateCompareMSRPButton);
@@ -351,6 +362,7 @@ namespace FinalProjectView
         private System.Windows.Forms.Button uxAggregateCompareMSRPButton;
         private System.Windows.Forms.Button uxAggregateStoreRatioButton;
         private System.Windows.Forms.Button uxAggregateStoreComponentsButton;
+        private System.Windows.Forms.Label uxAggregateMinLabel;
     }
 }
 
