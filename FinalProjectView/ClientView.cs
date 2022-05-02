@@ -12,7 +12,7 @@ namespace FinalProjectView
 {
     public partial class ClientView : Form
     {
-        private ViewController c;
+        private ViewController controller;
         private string[] ComponentCategories = new string[] { "", "CPU", "Motherboard", "GPU", "RAM", "PowerSupply", "Storage" };
         private string[] StateAbbrevList = new string[] { "", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
                                                           "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
@@ -22,13 +22,13 @@ namespace FinalProjectView
 
         public ClientView(ViewController controller)
         {
-            c = controller;
+            this.controller = controller;
             InitializeComponent();
         }
 
         private void uxAdminButton_Click(object sender, EventArgs e)
         {
-            c.ChangeViewsClient();
+            controller.ChangeViewsClient();
         }
 
         private void uxSearchButton_Click(object sender, EventArgs e)
@@ -47,8 +47,8 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
 
-            List<Component> results = c.GetDataWithParameters(CollectData());
-            foreach(Component com in results)
+            List<ComponentDisplay> results = controller.GetDataWithParameters(CollectData());
+            foreach(ComponentDisplay com in results)
             {
                 uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
                     com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
@@ -159,27 +159,80 @@ namespace FinalProjectView
             }
             else
             {
-                var testing = c.AggregateStockData(input);
-                MessageBox.Show(testing[0].StoreAddress);
+                var results = controller.AggregateStockData(input);
+                uxResultsBox.Columns.Clear();
+                uxResultsBox.Items.Clear();
+                uxResultsBox.Columns.Add("Store");
+                uxResultsBox.Columns.Add("Address");
+                uxResultsBox.Columns.Add("ZipCode");
+                uxResultsBox.Columns.Add("Total Value");
+                uxResultsBox.Columns.Add("Number In Stock");
+                uxResultsBox.Columns.Add("Average Price");    
+
+                foreach(AggregateStockModel model in results)
+                {
+                    uxResultsBox.Items.Add(new ListViewItem(new string[] { model.StoreName, model.StoreAddress,
+                    "" + model.ZipCode, "" + model.TotalValue, "" + model.NumberInStock, "" + model.AveragePrice}));
+                }
+
+                uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
         }
 
         private void uxAggregateCompareMSRPButton_Click(object sender, EventArgs e)
         {
-            var testing = c.AggregateCompareMSRPData();
-            MessageBox.Show(testing[0].ComponentCategoryName);
+            var results = controller.AggregateCompareMSRPData();
+            uxResultsBox.Columns.Clear();
+            uxResultsBox.Items.Clear();
+            uxResultsBox.Columns.Add("Component Category");
+            uxResultsBox.Columns.Add("Manufacturer Count");
+            uxResultsBox.Columns.Add("Component Count");
+            
+            foreach(AggregateMSRPModel model in results)
+            {
+                uxResultsBox.Items.Add(new ListViewItem(new string[] { model.ComponentCategoryName, "" + model.ManufacturerCount,
+                "" + model.ComponentCount}));
+            }
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void uxAggregateStoreRatioButton_Click(object sender, EventArgs e)
         {
-            var testing = c.AggregateStockRatioData();
-            MessageBox.Show(testing[0].StoreName);
+            var results = controller.AggregateStockRatioData();
+            uxResultsBox.Columns.Clear();
+            uxResultsBox.Items.Clear();
+            uxResultsBox.Columns.Add("Store");
+            uxResultsBox.Columns.Add("Address");
+            uxResultsBox.Columns.Add("ZipCode");
+            uxResultsBox.Columns.Add("Number In Stock");
+            uxResultsBox.Columns.Add("Stock Ratio");
+            
+            foreach(AggregateInStockRatioModel model in results)
+            {
+                uxResultsBox.Items.Add(new ListViewItem(new string[] { model.StoreName, model.StoreAddress,
+                "" + model.ZipCode, "" + model.InStock, "" + model.StockRatio}));
+            }
+
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void uxAggregateStoreComponentsButton_Click(object sender, EventArgs e)
         {
-            var testing = c.AggregateStoreComponentData();
-            MessageBox.Show(testing[0].ComponentCategoryName);
+            var results = controller.AggregateStoreComponentData();
+            uxResultsBox.Columns.Clear();
+            uxResultsBox.Items.Clear();
+            uxResultsBox.Columns.Add("Component Category");
+            uxResultsBox.Columns.Add("State");
+            uxResultsBox.Columns.Add("City");
+            uxResultsBox.Columns.Add("Store Count");
+            uxResultsBox.Columns.Add("Component Count");
+            foreach(AggregateStoreComponentsByStateModel model in results)
+            {
+                uxResultsBox.Items.Add(new ListViewItem(new string[] { model.ComponentCategoryName, model.StateName, model.CityName,
+                "" + model.StoreCount, "" + model.ComponentCount}));
+            }
+
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
     }
 }

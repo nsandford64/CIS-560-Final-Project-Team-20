@@ -9,8 +9,8 @@ namespace ProjectData
 {
     public interface IClientRepository
     {
-        List<Component> GetComponents(string componentName);
+        List<ComponentDisplay> GetComponents(string componentName);
 
-        Component InsertComponent(List<string> data);
+        ComponentDisplay InsertComponent(List<string> data);
     }
 }

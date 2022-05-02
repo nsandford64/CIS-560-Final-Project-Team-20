@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.DataDelegates
 {
-    public class GetDataDataDelegate : DataReaderDelegate<List<Component>>
+    public class GetDataDataDelegate : DataReaderDelegate<List<ComponentDisplay>>
     {
         private readonly List<string> parameters;
 
@@ -105,12 +105,12 @@ namespace ProjectData.DataDelegates
             }
         }
 
-        public override List<Component> Translate(SqlCommand command, IDataRowReader reader)
+        public override List<ComponentDisplay> Translate(SqlCommand command, IDataRowReader reader)
         {
-            List<Component> results = new List<Component>();
+            List<ComponentDisplay> results = new List<ComponentDisplay>();
             while (reader.Read())
             {
-                results.Add(new Component(
+                results.Add(new ComponentDisplay(
                    reader.GetString("ComponentName"),
                    reader.GetString("ModelNumber"),
                    reader.GetString("ManufacturerName"),

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.Models
 {
-    public class Component
+    public class ComponentDisplay
     {
         public string State { get; }
 
@@ -32,7 +32,7 @@ namespace ProjectData.Models
 
 
 
-        public Component(string name, string model, string manufacturer, ComponentCategory category, decimal price, object stock, string store, string address, int zip, string city, string state)
+        public ComponentDisplay(string name, string model, string manufacturer, ComponentCategory category, decimal price, object stock, string store, string address, int zip, string city, string state)
         {
             ComponentName = name;
             ModelNumber = model;

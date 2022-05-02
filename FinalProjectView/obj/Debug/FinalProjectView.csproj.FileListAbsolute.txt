@@ -29,10 +29,10 @@ C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\De
 C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\ProjectData.pdb
 C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\bin\Debug\DataAccess.pdb
 C:\Users\Noah\Source\Repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.csproj.CopyComplete
-C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.AdminGroup.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddComponentView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddManufacturerView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddCityView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddStorefrontView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddComponentStorefrontView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.UpdateComponentStorefrontForm.resources
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.AdminView.resources

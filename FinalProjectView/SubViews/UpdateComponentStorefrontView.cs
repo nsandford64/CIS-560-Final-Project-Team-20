@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProjectView.SubViews
 {
-    public partial class UpdateComponentStorefrontForm : Form
+    public partial class UpdateComponentStorefrontView : Form
     {
-        public UpdateComponentStorefrontForm()
+        public UpdateComponentStorefrontView()
         {
             InitializeComponent();
         }

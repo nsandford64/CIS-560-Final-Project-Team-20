@@ -13,14 +13,13 @@ namespace FinalProjectView
 
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=partfinder;Integrated Security=SSPI;";
 
-        SqlClientRepository clientRepo = new SqlClientRepository(connectionString);
-        SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
+        private SqlClientRepository clientRepo = new SqlClientRepository(connectionString);
+        private SqlAdminRepository adminRepo = new SqlAdminRepository(connectionString);
         
-        private ClientView c;
-        private AdminGroup a;
+        private ClientView client;
+        private AdminView admin;
 
         private List<string> manufacturerNames;
-        private List<string> storeNames;
         private List<string> stateNames;
         private List<string> cityNames;
         private List<string> componentCategoryNames;
@@ -29,30 +28,29 @@ namespace FinalProjectView
         {
             stateNames = adminRepo.GetStateNames();
             manufacturerNames = adminRepo.GetManufacturerNames();
-            //storeNames = adminRepo.GetStoreNames();
             cityNames = adminRepo.GetCityNames();
             componentCategoryNames = adminRepo.GetComponentCategories();
         }
 
-        public void SetViews(ClientView client, AdminGroup admin)
+        public void SetViews(ClientView client, AdminView admin)
         {
-            a = admin;
-            c = client;
+            this.admin = admin;
+            this.client = client;
         }
 
         public void ChangeViewsClient()
         {
-            c.Hide();
-            a.Show();
+            client.Hide();
+            admin.Show();
         }
 
         public void ChangeViewsAdmin()
         {
-            a.Hide();
-            c.Show();
+            admin.Hide();
+            client.Show();
         }
 
-        public List<Component> GetDataWithParameters(List<string> parameters)
+        public List<ComponentDisplay> GetDataWithParameters(List<string> parameters)
         {
             return clientRepo.GetComponents(parameters);
         }

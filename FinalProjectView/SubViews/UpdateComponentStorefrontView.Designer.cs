@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProjectView.SubViews
 {
-    partial class UpdateComponentStorefrontForm
+    partial class UpdateComponentStorefrontView
     {
         /// <summary>
         /// Required designer variable.

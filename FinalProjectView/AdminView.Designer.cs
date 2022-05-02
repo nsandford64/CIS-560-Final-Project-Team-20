@@ -1,7 +1,7 @@
 ﻿
 namespace FinalProjectView
 {
-    partial class AdminGroup
+    partial class AdminView
     {
         /// <summary>
         /// Required designer variable.

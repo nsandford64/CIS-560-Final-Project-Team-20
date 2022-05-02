@@ -18,7 +18,7 @@ namespace ProjectData
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public List<Component> GetComponents(List<string> parameters)
+        public List<ComponentDisplay> GetComponents(List<string> parameters)
         {
             var d = new GetDataDataDelegate(parameters);
             return executor.ExecuteReader(d);

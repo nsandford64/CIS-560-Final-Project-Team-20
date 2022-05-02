@@ -9,7 +9,7 @@ namespace ProjectData
 {
     public interface IAdminRepository
     {
-        Component InsertComponent(List<string> data);
+        ComponentDisplay InsertComponent(List<string> data);
 
         Manufacturer InsertManufacturer(List<string> data);
 

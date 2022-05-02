@@ -27,8 +27,8 @@ namespace ProjectData.DataDelegates
             List<AggregateMSRPModel> results = new List<AggregateMSRPModel>();
             while (reader.Read())
             {
-                results.Add(new AggregateMSRPModel(reader.GetString("ComponentCategoryName"), reader.GetInt32("ComponentCount"),
-                    reader.GetInt32("ManufacturerCount")));
+                results.Add(new AggregateMSRPModel(reader.GetString("ComponentCategoryName"), reader.GetInt32("ManufacturerCount"),
+                    reader.GetInt32("ComponentCount")));
             }
             return results;
         }

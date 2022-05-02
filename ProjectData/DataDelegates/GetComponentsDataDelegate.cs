@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.DataDelegates
 {
-    class GetComponentsDataDelegate : DataReaderDelegate<List<Component>>
+    class GetComponentsDataDelegate : DataReaderDelegate<List<ComponentDisplay>>
     {
         private readonly string componentName;
 
@@ -26,9 +26,9 @@ namespace ProjectData.DataDelegates
             command.Parameters.AddWithValue("Name", componentName);
         }
 
-        public override List<Component> Translate(SqlCommand command, IDataRowReader reader)
+        public override List<ComponentDisplay> Translate(SqlCommand command, IDataRowReader reader)
         {
-            List<Component> results = new List<Component>();
+            List<ComponentDisplay> results = new List<ComponentDisplay>();
             /*
             while (reader.Read())
             {

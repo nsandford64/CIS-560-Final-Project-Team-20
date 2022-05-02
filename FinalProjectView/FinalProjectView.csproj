@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminGroup.cs">
+    <Compile Include="AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminGroup.Designer.cs">
-      <DependentUpon>AdminGroup.cs</DependentUpon>
+    <Compile Include="AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminState.cs" />
     <Compile Include="ClientView.cs">
@@ -92,15 +92,15 @@
     <Compile Include="SubViews\AddStorefrontView.Designer.cs">
       <DependentUpon>AddStorefrontView.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubViews\UpdateComponentStorefrontForm.cs">
+    <Compile Include="SubViews\UpdateComponentStorefrontView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubViews\UpdateComponentStorefrontForm.Designer.cs">
-      <DependentUpon>UpdateComponentStorefrontForm.cs</DependentUpon>
+    <Compile Include="SubViews\UpdateComponentStorefrontView.Designer.cs">
+      <DependentUpon>UpdateComponentStorefrontView.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewController.cs" />
-    <EmbeddedResource Include="AdminGroup.resx">
-      <DependentUpon>AdminGroup.cs</DependentUpon>
+    <EmbeddedResource Include="AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientView.resx">
       <DependentUpon>ClientView.cs</DependentUpon>
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="SubViews\AddStorefrontView.resx">
       <DependentUpon>AddStorefrontView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubViews\UpdateComponentStorefrontForm.resx">
-      <DependentUpon>UpdateComponentStorefrontForm.cs</DependentUpon>
+    <EmbeddedResource Include="SubViews\UpdateComponentStorefrontView.resx">
+      <DependentUpon>UpdateComponentStorefrontView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

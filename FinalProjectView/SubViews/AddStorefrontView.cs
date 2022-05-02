@@ -12,10 +12,10 @@ namespace FinalProjectView.SubViews
 {
     public partial class AddStorefrontView : Form
     {
-        private AdminGroup ag;
-        public AddStorefrontView(AdminGroup ag)
+        private AdminView adminView;
+        public AddStorefrontView(AdminView av)
         {
-            this.ag = ag;
+            this.adminView = av;
             InitializeComponent();
         }
 
@@ -91,7 +91,7 @@ namespace FinalProjectView.SubViews
 
         private void uxStoreStatePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            uxStoreCityNamePicker.DataSource = ag.GetPossibleCities(uxStoreStatePicker.Text);
+            uxStoreCityNamePicker.DataSource = adminView.GetPossibleCities(uxStoreStatePicker.Text);
         }
     }
 }

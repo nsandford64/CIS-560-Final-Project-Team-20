@@ -48,7 +48,7 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
-        public Component InsertComponent(List<string> data)
+        public ComponentDisplay InsertComponent(List<string> data)
         {
             var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));
             return executor.ExecuteNonQuery(d);

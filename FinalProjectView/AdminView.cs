@@ -11,13 +11,13 @@ using FinalProjectView.SubViews;
 
 namespace FinalProjectView
 {
-    public partial class AdminGroup : Form
+    public partial class AdminView : Form
     {
-        private ViewController c;
+        private ViewController controller;
 
-        public AdminGroup(ViewController c)
+        public AdminView(ViewController c)
         {
-            this.c = c;
+            this.controller = c;
             InitializeComponent();
         }
 
@@ -25,8 +25,8 @@ namespace FinalProjectView
         {
             using(AddComponentView view = new AddComponentView()) 
             {
-                view.SetManufacturers(c.GetManufacturerNames());
-                view.SetComponentCategory(c.GetComponentCategoryNames());
+                view.SetManufacturers(controller.GetManufacturerNames());
+                view.SetComponentCategory(controller.GetComponentCategoryNames());
                 if(view.ShowDialog() == DialogResult.OK)
                 { 
                     List<string> input = new List<string>();
@@ -35,7 +35,7 @@ namespace FinalProjectView
                     input.Add(view.Manufacturer);
                     input.Add(view.ComponentCategory);
                     input.Add(view.MSRP);
-                    c.InsertData(input, AdminState.Component);
+                    controller.InsertData(input, AdminState.Component);
                 }
             }
         }
@@ -48,8 +48,8 @@ namespace FinalProjectView
                 {
                     List<string> input = new List<string>();
                     input.Add(view.Manufacturer);
-                    c.InsertData(input, AdminState.Manufacturer);
-                    c.UpdateManufacturerNames();
+                    controller.InsertData(input, AdminState.Manufacturer);
+                    controller.UpdateManufacturerNames();
                 }
             }
         }
@@ -58,14 +58,14 @@ namespace FinalProjectView
         {
             using (AddCityView view = new AddCityView())
             {
-                view.SetStates(c.GetStateNames());
+                view.SetStates(controller.GetStateNames());
                 if(view.ShowDialog() == DialogResult.OK)
                 {
                     List<string> input = new List<string>();
                     input.Add(view.CityName);
                     input.Add(view.StateName);
-                    c.InsertData(input, AdminState.Cities);
-                    c.UpdateCityNames();
+                    controller.InsertData(input, AdminState.Cities);
+                    controller.UpdateCityNames();
                 }
             }
         }
@@ -74,8 +74,8 @@ namespace FinalProjectView
         {
             using (AddStorefrontView view = new AddStorefrontView(this))
             {
-                view.SetStates(c.GetStateNames());
-                view.SetCities(c.GetCityNames());
+                view.SetStates(controller.GetStateNames());
+                view.SetCities(controller.GetCityNames());
                 if (view.ShowDialog() == DialogResult.OK)
                 {
                     List<string> input = new List<string>();
@@ -84,14 +84,14 @@ namespace FinalProjectView
                     input.Add(view.ZipCode);
                     input.Add(view.CityName);
                     input.Add(view.StateName);
-                    c.InsertData(input, AdminState.Storefront);
+                    controller.InsertData(input, AdminState.Storefront);
                 }
             }
         }
 
         public List<string> GetPossibleCities(string state)
         {
-            return c.GetCitiesByState(state);
+            return controller.GetCitiesByState(state);
         }
 
         private void uxAddComponentStorefrontButton_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace FinalProjectView
                     input.Add(view.ZipCode);
                     input.Add(view.Price);
                     input.Add(view.InStock);
-                    c.InsertData(input, AdminState.Storefront);
+                    controller.InsertData(input, AdminState.Storefront);
                 }
             }
         }
@@ -118,7 +118,7 @@ namespace FinalProjectView
 
         private void uxClientButton_Click(object sender, EventArgs e)
         {
-            c.ChangeViewsAdmin();
+            controller.ChangeViewsAdmin();
         }
     }
 }

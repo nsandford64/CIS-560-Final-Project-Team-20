@@ -9,7 +9,7 @@ using ProjectData.Models;
 
 namespace ProjectData.DataDelegates
 {
-    public class InsertComponentDataDelegate : NonQueryDataDelegate<Component>
+    public class InsertComponentDataDelegate : NonQueryDataDelegate<ComponentDisplay>
     {
         private readonly string name;
         private readonly string modelNo;
@@ -40,7 +40,7 @@ namespace ProjectData.DataDelegates
             p.Direction = System.Data.ParameterDirection.Output;
         }
 
-        public override Component Translate(SqlCommand command)
+        public override ComponentDisplay Translate(SqlCommand command)
         {
             return null;
             /*

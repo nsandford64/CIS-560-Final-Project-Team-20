@@ -65,7 +65,7 @@
     <Compile Include="Models\AggregateStockModel.cs" />
     <Compile Include="Models\AggregateStoreComponentsByStateModel.cs" />
     <Compile Include="Models\City.cs" />
-    <Compile Include="Models\Component.cs" />
+    <Compile Include="Models\ComponentDisplay.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
     <Compile Include="Models\ComponentStorefront.cs" />
     <Compile Include="Models\Manufacturer.cs" />
