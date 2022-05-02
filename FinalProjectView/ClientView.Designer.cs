@@ -56,6 +56,8 @@ namespace FinalProjectView
             this.uxAggregateStoreRatioButton = new System.Windows.Forms.Button();
             this.uxAggregateStoreComponentsButton = new System.Windows.Forms.Button();
             this.uxAggregateMinLabel = new System.Windows.Forms.Label();
+            this.uxLocationFiltersLabel = new System.Windows.Forms.Label();
+            this.uxComponentFiltersLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -70,8 +72,9 @@ namespace FinalProjectView
             // 
             // uxStatePicker
             // 
+            this.uxStatePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxStatePicker.FormattingEnabled = true;
-            this.uxStatePicker.Location = new System.Drawing.Point(92, 12);
+            this.uxStatePicker.Location = new System.Drawing.Point(128, 53);
             this.uxStatePicker.Name = "uxStatePicker";
             this.uxStatePicker.Size = new System.Drawing.Size(82, 24);
             this.uxStatePicker.TabIndex = 1;
@@ -80,7 +83,7 @@ namespace FinalProjectView
             // uxStateLabel
             // 
             this.uxStateLabel.AutoSize = true;
-            this.uxStateLabel.Location = new System.Drawing.Point(42, 15);
+            this.uxStateLabel.Location = new System.Drawing.Point(78, 56);
             this.uxStateLabel.Name = "uxStateLabel";
             this.uxStateLabel.Size = new System.Drawing.Size(45, 17);
             this.uxStateLabel.TabIndex = 2;
@@ -88,7 +91,7 @@ namespace FinalProjectView
             // 
             // uxAddressBox
             // 
-            this.uxAddressBox.Location = new System.Drawing.Point(92, 55);
+            this.uxAddressBox.Location = new System.Drawing.Point(128, 94);
             this.uxAddressBox.Name = "uxAddressBox";
             this.uxAddressBox.Size = new System.Drawing.Size(230, 22);
             this.uxAddressBox.TabIndex = 4;
@@ -96,7 +99,7 @@ namespace FinalProjectView
             // uxAddressLabel
             // 
             this.uxAddressLabel.AutoSize = true;
-            this.uxAddressLabel.Location = new System.Drawing.Point(23, 58);
+            this.uxAddressLabel.Location = new System.Drawing.Point(59, 97);
             this.uxAddressLabel.Name = "uxAddressLabel";
             this.uxAddressLabel.Size = new System.Drawing.Size(64, 17);
             this.uxAddressLabel.TabIndex = 5;
@@ -104,7 +107,7 @@ namespace FinalProjectView
             // 
             // uxStorefrontBox
             // 
-            this.uxStorefrontBox.Location = new System.Drawing.Point(92, 147);
+            this.uxStorefrontBox.Location = new System.Drawing.Point(128, 186);
             this.uxStorefrontBox.Name = "uxStorefrontBox";
             this.uxStorefrontBox.Size = new System.Drawing.Size(230, 22);
             this.uxStorefrontBox.TabIndex = 6;
@@ -112,7 +115,7 @@ namespace FinalProjectView
             // uxStorefrontLabel
             // 
             this.uxStorefrontLabel.AutoSize = true;
-            this.uxStorefrontLabel.Location = new System.Drawing.Point(10, 150);
+            this.uxStorefrontLabel.Location = new System.Drawing.Point(46, 189);
             this.uxStorefrontLabel.Name = "uxStorefrontLabel";
             this.uxStorefrontLabel.Size = new System.Drawing.Size(75, 17);
             this.uxStorefrontLabel.TabIndex = 7;
@@ -122,14 +125,14 @@ namespace FinalProjectView
             // 
             this.uxComponentCategoryPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxComponentCategoryPicker.FormattingEnabled = true;
-            this.uxComponentCategoryPicker.Location = new System.Drawing.Point(92, 234);
+            this.uxComponentCategoryPicker.Location = new System.Drawing.Point(129, 255);
             this.uxComponentCategoryPicker.Name = "uxComponentCategoryPicker";
             this.uxComponentCategoryPicker.Size = new System.Drawing.Size(106, 24);
             this.uxComponentCategoryPicker.TabIndex = 8;
             // 
             // uxComponentNameBox
             // 
-            this.uxComponentNameBox.Location = new System.Drawing.Point(130, 286);
+            this.uxComponentNameBox.Location = new System.Drawing.Point(130, 295);
             this.uxComponentNameBox.Name = "uxComponentNameBox";
             this.uxComponentNameBox.Size = new System.Drawing.Size(230, 22);
             this.uxComponentNameBox.TabIndex = 9;
@@ -137,7 +140,7 @@ namespace FinalProjectView
             // uxComponentCategoryLabel
             // 
             this.uxComponentCategoryLabel.AutoSize = true;
-            this.uxComponentCategoryLabel.Location = new System.Drawing.Point(18, 237);
+            this.uxComponentCategoryLabel.Location = new System.Drawing.Point(55, 258);
             this.uxComponentCategoryLabel.Name = "uxComponentCategoryLabel";
             this.uxComponentCategoryLabel.Size = new System.Drawing.Size(69, 17);
             this.uxComponentCategoryLabel.TabIndex = 11;
@@ -146,7 +149,7 @@ namespace FinalProjectView
             // uxComponentNameLabel
             // 
             this.uxComponentNameLabel.AutoSize = true;
-            this.uxComponentNameLabel.Location = new System.Drawing.Point(-1, 289);
+            this.uxComponentNameLabel.Location = new System.Drawing.Point(-1, 298);
             this.uxComponentNameLabel.Name = "uxComponentNameLabel";
             this.uxComponentNameLabel.Size = new System.Drawing.Size(125, 17);
             this.uxComponentNameLabel.TabIndex = 12;
@@ -154,7 +157,7 @@ namespace FinalProjectView
             // 
             // uxSearchButton
             // 
-            this.uxSearchButton.Location = new System.Drawing.Point(12, 437);
+            this.uxSearchButton.Location = new System.Drawing.Point(12, 446);
             this.uxSearchButton.Name = "uxSearchButton";
             this.uxSearchButton.Size = new System.Drawing.Size(112, 51);
             this.uxSearchButton.TabIndex = 14;
@@ -176,7 +179,7 @@ namespace FinalProjectView
             // uxManufacturerLabel
             // 
             this.uxManufacturerLabel.AutoSize = true;
-            this.uxManufacturerLabel.Location = new System.Drawing.Point(10, 334);
+            this.uxManufacturerLabel.Location = new System.Drawing.Point(28, 344);
             this.uxManufacturerLabel.Name = "uxManufacturerLabel";
             this.uxManufacturerLabel.Size = new System.Drawing.Size(96, 17);
             this.uxManufacturerLabel.TabIndex = 17;
@@ -184,7 +187,7 @@ namespace FinalProjectView
             // 
             // uxManufacturerBox
             // 
-            this.uxManufacturerBox.Location = new System.Drawing.Point(112, 329);
+            this.uxManufacturerBox.Location = new System.Drawing.Point(130, 339);
             this.uxManufacturerBox.Name = "uxManufacturerBox";
             this.uxManufacturerBox.Size = new System.Drawing.Size(230, 22);
             this.uxManufacturerBox.TabIndex = 16;
@@ -192,7 +195,7 @@ namespace FinalProjectView
             // uxZipCodeLabel
             // 
             this.uxZipCodeLabel.AutoSize = true;
-            this.uxZipCodeLabel.Location = new System.Drawing.Point(17, 104);
+            this.uxZipCodeLabel.Location = new System.Drawing.Point(53, 143);
             this.uxZipCodeLabel.Name = "uxZipCodeLabel";
             this.uxZipCodeLabel.Size = new System.Drawing.Size(69, 17);
             this.uxZipCodeLabel.TabIndex = 21;
@@ -200,7 +203,7 @@ namespace FinalProjectView
             // 
             // uxZipCodeBox
             // 
-            this.uxZipCodeBox.Location = new System.Drawing.Point(92, 101);
+            this.uxZipCodeBox.Location = new System.Drawing.Point(128, 140);
             this.uxZipCodeBox.Name = "uxZipCodeBox";
             this.uxZipCodeBox.Size = new System.Drawing.Size(230, 22);
             this.uxZipCodeBox.TabIndex = 20;
@@ -208,7 +211,7 @@ namespace FinalProjectView
             // uxMinPriceLabel
             // 
             this.uxMinPriceLabel.AutoSize = true;
-            this.uxMinPriceLabel.Location = new System.Drawing.Point(24, 388);
+            this.uxMinPriceLabel.Location = new System.Drawing.Point(24, 397);
             this.uxMinPriceLabel.Name = "uxMinPriceLabel";
             this.uxMinPriceLabel.Size = new System.Drawing.Size(70, 17);
             this.uxMinPriceLabel.TabIndex = 22;
@@ -217,7 +220,7 @@ namespace FinalProjectView
             // uxMaxPriceLabel
             // 
             this.uxMaxPriceLabel.AutoSize = true;
-            this.uxMaxPriceLabel.Location = new System.Drawing.Point(235, 388);
+            this.uxMaxPriceLabel.Location = new System.Drawing.Point(235, 397);
             this.uxMaxPriceLabel.Name = "uxMaxPriceLabel";
             this.uxMaxPriceLabel.Size = new System.Drawing.Size(73, 17);
             this.uxMaxPriceLabel.TabIndex = 23;
@@ -225,14 +228,14 @@ namespace FinalProjectView
             // 
             // uxMinPriceBox
             // 
-            this.uxMinPriceBox.Location = new System.Drawing.Point(110, 388);
+            this.uxMinPriceBox.Location = new System.Drawing.Point(110, 397);
             this.uxMinPriceBox.Name = "uxMinPriceBox";
             this.uxMinPriceBox.Size = new System.Drawing.Size(100, 22);
             this.uxMinPriceBox.TabIndex = 24;
             // 
             // uxMaxPriceBox
             // 
-            this.uxMaxPriceBox.Location = new System.Drawing.Point(314, 385);
+            this.uxMaxPriceBox.Location = new System.Drawing.Point(314, 394);
             this.uxMaxPriceBox.Name = "uxMaxPriceBox";
             this.uxMaxPriceBox.Size = new System.Drawing.Size(100, 22);
             this.uxMaxPriceBox.TabIndex = 25;
@@ -293,11 +296,31 @@ namespace FinalProjectView
             this.uxAggregateMinLabel.TabIndex = 31;
             this.uxAggregateMinLabel.Text = "Min Value:";
             // 
+            // uxLocationFiltersLabel
+            // 
+            this.uxLocationFiltersLabel.AutoSize = true;
+            this.uxLocationFiltersLabel.Location = new System.Drawing.Point(126, 13);
+            this.uxLocationFiltersLabel.Name = "uxLocationFiltersLabel";
+            this.uxLocationFiltersLabel.Size = new System.Drawing.Size(108, 17);
+            this.uxLocationFiltersLabel.TabIndex = 32;
+            this.uxLocationFiltersLabel.Text = "Location Filters:";
+            // 
+            // uxComponentFiltersLabel
+            // 
+            this.uxComponentFiltersLabel.AutoSize = true;
+            this.uxComponentFiltersLabel.Location = new System.Drawing.Point(127, 225);
+            this.uxComponentFiltersLabel.Name = "uxComponentFiltersLabel";
+            this.uxComponentFiltersLabel.Size = new System.Drawing.Size(126, 17);
+            this.uxComponentFiltersLabel.TabIndex = 33;
+            this.uxComponentFiltersLabel.Text = "Component Filters:";
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 853);
+            this.Controls.Add(this.uxComponentFiltersLabel);
+            this.Controls.Add(this.uxLocationFiltersLabel);
             this.Controls.Add(this.uxAggregateMinLabel);
             this.Controls.Add(this.uxAggregateStoreComponentsButton);
             this.Controls.Add(this.uxAggregateStoreRatioButton);
@@ -363,6 +386,8 @@ namespace FinalProjectView
         private System.Windows.Forms.Button uxAggregateStoreRatioButton;
         private System.Windows.Forms.Button uxAggregateStoreComponentsButton;
         private System.Windows.Forms.Label uxAggregateMinLabel;
+        private System.Windows.Forms.Label uxLocationFiltersLabel;
+        private System.Windows.Forms.Label uxComponentFiltersLabel;
     }
 }
 
