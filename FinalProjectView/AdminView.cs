@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProjectView.SubViews;
+using ProjectData.Models;
 
 namespace FinalProjectView
 {
@@ -111,6 +112,28 @@ namespace FinalProjectView
             }
         }
 
+        private void uxUpdateComponentStorefrontButton_Click(object sender, EventArgs e)
+        {
+            using (UpdateComponentStorefrontView view = new UpdateComponentStorefrontView(this))
+            {
+                if (view.ShowDialog() == DialogResult.OK)
+                {
+                    List<string> input = new List<string>();
+                    input.Add(view.StoreAddress);
+                    input.Add(view.ZipCode);
+                    input.Add(view.ModelNumber);
+                    input.Add(view.InStock);
+                    input.Add(view.Price);
+                    controller.UpdateComponentStorefront(input);
+                }
+            }
+        }
+
+        public List<ComponentStorefrontDisplay> EditableComponentsList()
+        {
+            return controller.GetEditableComponents();
+        }
+
         private void AdminGroup_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -120,5 +143,7 @@ namespace FinalProjectView
         {
             controller.ChangeViewsAdmin();
         }
+
+
     }
 }

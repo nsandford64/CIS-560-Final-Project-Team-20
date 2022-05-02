@@ -34,5 +34,5 @@ C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\D
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddCityView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddStorefrontView.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.AddComponentStorefrontView.resources
-C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.UpdateComponentStorefrontForm.resources
 C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.AdminView.resources
+C:\Users\foxxt\source\repos\CIS-560-Final-Project-Team-20\FinalProjectView\obj\Debug\FinalProjectView.SubViews.UpdateComponentStorefrontView.resources

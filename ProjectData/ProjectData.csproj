@@ -49,8 +49,8 @@
     <Compile Include="DataDelegates\GetCitiesByStateDataDelegate.cs" />
     <Compile Include="DataDelegates\GetCityNamesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetComponentCategoriesDataDelegate.cs" />
-    <Compile Include="DataDelegates\GetComponentsDataDelegate.cs" />
     <Compile Include="DataDelegates\GetDataDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetEditableComponentsDataDelegate.cs" />
     <Compile Include="DataDelegates\GetManufacturerNamesDataDelegate.cs" />
     <Compile Include="DataDelegates\GetStateNamesDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertCityDataDelegate.cs" />
@@ -69,6 +69,7 @@
     <Compile Include="Models\ComponentDisplay.cs" />
     <Compile Include="Models\ComponentCategory.cs" />
     <Compile Include="Models\ComponentStorefront.cs" />
+    <Compile Include="Models\ComponentStorefrontDisplay.cs" />
     <Compile Include="Models\Manufacturer.cs" />
     <Compile Include="Models\Storefront.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +101,7 @@
     <Content Include="Sql\Procedures\PartFinder.GetCityNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponentCategoryNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
+    <Content Include="Sql\Procedures\PartFinder.GetEditableComponents.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetManufacturerNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertCity.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertComponent.sql" />

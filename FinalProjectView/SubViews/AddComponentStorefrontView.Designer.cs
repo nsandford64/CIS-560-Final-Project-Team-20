@@ -45,7 +45,6 @@ namespace FinalProjectView.SubViews
             // uxInStockCheckBox
             // 
             this.uxInStockCheckBox.AutoSize = true;
-            this.uxInStockCheckBox.Enabled = false;
             this.uxInStockCheckBox.Location = new System.Drawing.Point(152, 210);
             this.uxInStockCheckBox.Name = "uxInStockCheckBox";
             this.uxInStockCheckBox.Size = new System.Drawing.Size(88, 21);
@@ -56,7 +55,6 @@ namespace FinalProjectView.SubViews
             // uxPriceComboLabel
             // 
             this.uxPriceComboLabel.AutoSize = true;
-            this.uxPriceComboLabel.Enabled = false;
             this.uxPriceComboLabel.Location = new System.Drawing.Point(100, 173);
             this.uxPriceComboLabel.Name = "uxPriceComboLabel";
             this.uxPriceComboLabel.Size = new System.Drawing.Size(44, 17);
@@ -65,7 +63,6 @@ namespace FinalProjectView.SubViews
             // 
             // uxPriceComboBox
             // 
-            this.uxPriceComboBox.Enabled = false;
             this.uxPriceComboBox.Location = new System.Drawing.Point(152, 168);
             this.uxPriceComboBox.Name = "uxPriceComboBox";
             this.uxPriceComboBox.Size = new System.Drawing.Size(173, 22);
@@ -74,7 +71,6 @@ namespace FinalProjectView.SubViews
             // uxZipCodeComboLabel
             // 
             this.uxZipCodeComboLabel.AutoSize = true;
-            this.uxZipCodeComboLabel.Enabled = false;
             this.uxZipCodeComboLabel.Location = new System.Drawing.Point(75, 124);
             this.uxZipCodeComboLabel.Name = "uxZipCodeComboLabel";
             this.uxZipCodeComboLabel.Size = new System.Drawing.Size(69, 17);
@@ -83,7 +79,6 @@ namespace FinalProjectView.SubViews
             // 
             // uxZipCodeComboBox
             // 
-            this.uxZipCodeComboBox.Enabled = false;
             this.uxZipCodeComboBox.Location = new System.Drawing.Point(152, 119);
             this.uxZipCodeComboBox.Name = "uxZipCodeComboBox";
             this.uxZipCodeComboBox.Size = new System.Drawing.Size(173, 22);
@@ -92,7 +87,6 @@ namespace FinalProjectView.SubViews
             // uxStoreAddressComboLabel
             // 
             this.uxStoreAddressComboLabel.AutoSize = true;
-            this.uxStoreAddressComboLabel.Enabled = false;
             this.uxStoreAddressComboLabel.Location = new System.Drawing.Point(42, 76);
             this.uxStoreAddressComboLabel.Name = "uxStoreAddressComboLabel";
             this.uxStoreAddressComboLabel.Size = new System.Drawing.Size(102, 17);
@@ -101,7 +95,6 @@ namespace FinalProjectView.SubViews
             // 
             // uxStoreAddressComboBox
             // 
-            this.uxStoreAddressComboBox.Enabled = false;
             this.uxStoreAddressComboBox.Location = new System.Drawing.Point(152, 71);
             this.uxStoreAddressComboBox.Name = "uxStoreAddressComboBox";
             this.uxStoreAddressComboBox.Size = new System.Drawing.Size(173, 22);
@@ -110,7 +103,6 @@ namespace FinalProjectView.SubViews
             // uxModelNumberComboLabel
             // 
             this.uxModelNumberComboLabel.AutoSize = true;
-            this.uxModelNumberComboLabel.Enabled = false;
             this.uxModelNumberComboLabel.Location = new System.Drawing.Point(42, 34);
             this.uxModelNumberComboLabel.Name = "uxModelNumberComboLabel";
             this.uxModelNumberComboLabel.Size = new System.Drawing.Size(104, 17);
@@ -119,7 +111,6 @@ namespace FinalProjectView.SubViews
             // 
             // uxModelNumberComboBox
             // 
-            this.uxModelNumberComboBox.Enabled = false;
             this.uxModelNumberComboBox.Location = new System.Drawing.Point(152, 29);
             this.uxModelNumberComboBox.Name = "uxModelNumberComboBox";
             this.uxModelNumberComboBox.Size = new System.Drawing.Size(173, 22);

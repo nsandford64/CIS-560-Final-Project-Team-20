@@ -115,6 +115,11 @@ namespace FinalProjectView
             adminRepo.UpdateComponentStorefront(data);
         }
 
+        public List<ComponentStorefrontDisplay> GetEditableComponents()
+        {
+            return adminRepo.GetEditableComponents();
+        }
+
         public void InsertData(List<string> data, AdminState state)
         {
             if (state == AdminState.Component)

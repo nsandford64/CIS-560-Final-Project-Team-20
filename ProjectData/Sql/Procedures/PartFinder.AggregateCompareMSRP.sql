@@ -1,3 +1,7 @@
+/*This query counts the number of Manufacturers that produce parts that are being sold above their MSRP in Storefronts.
+This is done by comparing the Price column in the ComponentStorefront table to the MSRP column in the Component, and 
+counting when Price > MSRP. The query also aggregates the number of such components, and groups the component and manufacturer 
+counts by the ComponentCategory*/
 CREATE OR ALTER PROCEDURE PartFinder.AggregateCompareMSRP
 AS
 

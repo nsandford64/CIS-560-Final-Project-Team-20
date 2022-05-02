@@ -92,64 +92,6 @@ namespace FinalProjectView
             }
         }
 
-        private void uxComponentPropertyCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (uxComponentPropertyCheckBox.Checked)
-            {
-                uxComponentCategoryLabel.Enabled = true;
-                uxComponentCategoryPicker.Enabled = true;
-
-                uxComponentNameBox.Enabled = true;
-                uxComponentNameLabel.Enabled = true;
-
-                uxManufacturerBox.Enabled = true;
-                uxManufacturerLabel.Enabled = true;
-            }
-            if (!uxComponentPropertyCheckBox.Checked)
-            {
-                uxComponentCategoryLabel.Enabled = false;
-                uxComponentCategoryPicker.Enabled = false;
-
-                uxComponentNameBox.Enabled = false;
-                uxComponentNameLabel.Enabled = false;
-
-                uxManufacturerBox.Enabled = false;
-                uxManufacturerLabel.Enabled = false;
-            }
-        }
-
-        private void uxLocationPropertyCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (uxLocationPropertyCheckBox.Checked)
-            {
-                uxStatePicker.Enabled = true;
-                uxStateLabel.Enabled = true;
-
-                uxAddressBox.Enabled = true;
-                uxAddressLabel.Enabled = true;
-
-                uxZipCodeBox.Enabled = true;
-                uxZipCodeLabel.Enabled = true;
-
-                uxStorefrontBox.Enabled = true;
-                uxStorefrontLabel.Enabled = true;
-            }
-            if (!uxLocationPropertyCheckBox.Checked)
-            {
-                uxStatePicker.Enabled = false;
-                uxStateLabel.Enabled = false;
-
-                uxAddressBox.Enabled = false;
-                uxAddressLabel.Enabled = false;
-
-                uxZipCodeBox.Enabled = false;
-                uxZipCodeLabel.Enabled = false;
-
-                uxStorefrontBox.Enabled = false;
-                uxStorefrontLabel.Enabled = false;
-            }
-        }
-
         private void uxAggregateStockValueButton_Click(object sender, EventArgs e)
         {
             decimal input;

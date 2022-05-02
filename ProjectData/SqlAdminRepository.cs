@@ -84,5 +84,11 @@ namespace ProjectData
                 Convert.ToInt32(data[3]), Convert.ToDecimal(data[4]));
             executor.ExecuteNonQuery(d);
         }
+
+        public List<ComponentStorefrontDisplay> GetEditableComponents()
+        {
+            var d = new GetEditableComponentsDataDelegate();
+            return executor.ExecuteReader(d);
+        }
     }
 }

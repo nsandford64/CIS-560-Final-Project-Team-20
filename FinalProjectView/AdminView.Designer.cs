@@ -106,8 +106,9 @@ namespace FinalProjectView
             this.uxUpdateComponentStorefrontButton.TabIndex = 6;
             this.uxUpdateComponentStorefrontButton.Text = "Update a Component in a Storefront";
             this.uxUpdateComponentStorefrontButton.UseVisualStyleBackColor = true;
+            this.uxUpdateComponentStorefrontButton.Click += new System.EventHandler(this.uxUpdateComponentStorefrontButton_Click);
             // 
-            // AdminGroup
+            // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +120,7 @@ namespace FinalProjectView
             this.Controls.Add(this.uxAddCityButton);
             this.Controls.Add(this.uxAddManufacturerButton);
             this.Controls.Add(this.uxAddComponentButton);
-            this.Name = "AdminGroup";
+            this.Name = "AdminView";
             this.Text = "AdminGroup";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminGroup_FormClosed);
             this.ResumeLayout(false);
