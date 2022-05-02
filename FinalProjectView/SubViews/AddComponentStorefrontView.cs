@@ -17,7 +17,8 @@ namespace FinalProjectView.SubViews
         {
             adminView = av;
             InitializeComponent();
-
+            uxModelNumberPicker.DataSource = av.GetModelNumbers();
+            uxZipCodePicker.DataSource = av.GetZipCodes();
         }
 
         public string ModelNumber
@@ -85,6 +86,11 @@ namespace FinalProjectView.SubViews
             {
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void uxZipCodePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxStoreAddressPicker.DataSource = adminView.GetAddressesByZipCode(Convert.ToInt32(uxZipCodePicker.Text));
         }
     }
 }

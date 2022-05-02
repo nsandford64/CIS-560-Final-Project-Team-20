@@ -20,6 +20,7 @@ namespace FinalProjectView
         private AdminView admin;
 
         private List<string> manufacturerNames;
+
         private List<string> stateNames;
         private List<string> cityNames;
         private List<string> componentCategoryNames;
@@ -30,6 +31,15 @@ namespace FinalProjectView
             manufacturerNames = adminRepo.GetManufacturerNames();
             cityNames = adminRepo.GetCityNames();
             componentCategoryNames = adminRepo.GetComponentCategories();
+        }
+        public List<string> GetModelNumbers()
+        {
+            return adminRepo.GetModelNumbers();
+        }
+
+        public List<string> GetAddressesByZipCode(int zip)
+        {
+            return adminRepo.GetAddressesByZipCode(zip);
         }
 
         public void SetViews(ClientView client, AdminView admin)
@@ -48,6 +58,11 @@ namespace FinalProjectView
         {
             admin.Hide();
             client.Show();
+        }
+
+        public List<string> GetZipCodes()
+        {
+            return adminRepo.GetZipCodes();
         }
 
         public List<ComponentDisplay> GetDataWithParameters(List<string> parameters)

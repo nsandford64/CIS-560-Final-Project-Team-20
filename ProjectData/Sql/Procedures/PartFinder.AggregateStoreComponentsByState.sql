@@ -14,5 +14,6 @@ FROM PartFinder.States S
 	INNER JOIN PartFinder.Component CO ON CO.ComponentID = CS.ComponentID
 	INNER JOIN PartFinder.ComponentCategory CC ON CC.ComponentCategoryID = CO.ComponentCategoryID
 WHERE CS.InStock = 1
-GROUP BY StateName, CityName, ComponentCategoryName, SF.StoreID;
+GROUP BY StateName, CityName, ComponentCategoryName
+ORDER BY ComponentCategoryName, StateName, CityName;
 GO

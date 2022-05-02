@@ -22,6 +22,16 @@ namespace FinalProjectView
             InitializeComponent();
         }
 
+        public List<string> GetModelNumbers()
+        {
+            return controller.GetModelNumbers();
+        }
+
+        public List<string> GetAddressesByZipCode(int zip)
+        {
+            return controller.GetAddressesByZipCode(zip);
+        }
+
         private void uxAddComponentButton_Click(object sender, EventArgs e)
         {
             using(AddComponentView view = new AddComponentView()) 
@@ -39,6 +49,11 @@ namespace FinalProjectView
                     controller.InsertData(input, AdminState.Component);
                 }
             }
+        }
+
+        public List<string> GetZipCodes()
+        {
+            return controller.GetZipCodes();
         }
 
         private void uxAddManufacturerButton_Click(object sender, EventArgs e)

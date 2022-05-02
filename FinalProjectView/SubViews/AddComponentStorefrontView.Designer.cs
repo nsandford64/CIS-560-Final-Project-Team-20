@@ -121,6 +121,7 @@ namespace FinalProjectView.SubViews
             this.uxZipCodePicker.Name = "uxZipCodePicker";
             this.uxZipCodePicker.Size = new System.Drawing.Size(174, 24);
             this.uxZipCodePicker.TabIndex = 54;
+            this.uxZipCodePicker.SelectedIndexChanged += new System.EventHandler(this.uxZipCodePicker_SelectedIndexChanged);
             // 
             // uxStoreAddressPicker
             // 

@@ -30,6 +30,18 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
+        public List<string> GetModelNumbers()
+        {
+            var d = new GetModelNumbersDataDelegate();
+            return executor.ExecuteReader(d);
+        }
+
+        public List<string> GetAddressesByZipCode(int zip)
+        {
+            var d = new GetAddressesByZipCodeDataDelegate(zip);
+            return executor.ExecuteReader(d);
+        }
+
         public List<string> GetCityNames()
         {
             var d = new GetCityNamesDataDelegate();
@@ -52,6 +64,12 @@ namespace ProjectData
         {
             var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));
             return executor.ExecuteNonQuery(d);
+        }
+
+        public List<string> GetZipCodes()
+        {
+            var d = new GetZipCodesDataDelegate();
+            return executor.ExecuteReader(d);
         }
 
         public ComponentStorefront InsertComponentStorefront(List<string> data)
