@@ -24,6 +24,9 @@ namespace FinalProjectView
         private List<string> stateNames;
         private List<string> cityNames;
         private List<string> componentCategoryNames;
+        private List<string> modelNumbers;
+        private List<string> zipCodes;
+        private List<string> addresses;
 
         public ViewController()
         {
@@ -31,10 +34,13 @@ namespace FinalProjectView
             manufacturerNames = adminRepo.GetManufacturerNames();
             cityNames = adminRepo.GetCityNames();
             componentCategoryNames = adminRepo.GetComponentCategories();
+            modelNumbers = adminRepo.GetModelNumbers();
+            zipCodes = adminRepo.GetZipCodes();
+
         }
         public List<string> GetModelNumbers()
         {
-            return adminRepo.GetModelNumbers();
+            return modelNumbers;
         }
 
         public List<string> GetAddressesByZipCode(int zip)
@@ -62,7 +68,7 @@ namespace FinalProjectView
 
         public List<string> GetZipCodes()
         {
-            return adminRepo.GetZipCodes();
+            return zipCodes;
         }
 
         public List<ComponentDisplay> GetDataWithParameters(List<string> parameters)
@@ -103,6 +109,16 @@ namespace FinalProjectView
         public void UpdateCityNames()
         {
             cityNames = adminRepo.GetCityNames();
+        }
+
+        public void UpdateModelNumbers()
+        {
+            modelNumbers = adminRepo.GetModelNumbers();
+        }
+
+        public void UpdateZipCodes()
+        {
+            zipCodes = adminRepo.GetZipCodes();
         }
 
         public List<AggregateStockModel> AggregateStockData(decimal value)
@@ -148,6 +164,10 @@ namespace FinalProjectView
             if (state == AdminState.Storefront)
             {
                 adminRepo.InsertStorefront(data);
+                if (!zipCodes.Contains(data[2]))
+                {
+                    UpdateZipCodes();
+                }
             }
             if (state == AdminState.ComponentStorefront)
             {
