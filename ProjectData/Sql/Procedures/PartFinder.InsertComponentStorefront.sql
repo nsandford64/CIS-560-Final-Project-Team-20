@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE PartFinder.InsertComponentStorefront
 	@StoreAddress NVARCHAR(32),
 	@ZipCode INT,
 	@ModelNumber NVARCHAR(64),
-	@Price DECIMAL(5, 2),
+	@Price DECIMAL(10, 2),
 	@InStock BIT
 AS
 

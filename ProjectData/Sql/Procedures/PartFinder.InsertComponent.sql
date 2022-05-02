@@ -3,7 +3,7 @@ CREATE OR ALTER PROCEDURE PartFinder.InsertComponent
 	@ModelNumber NVARCHAR(64),
 	@Manufacturer NVARCHAR(64),
 	@ComponentCategory NVARCHAR(64),
-	@MSRP INT,
+	@MSRP DECIMAL(10,2),
 	@ComponentID INT OUTPUT
 AS
 

@@ -45,6 +45,7 @@ namespace FinalProjectView.SubViews
             // 
             // uxStoreCityNamePicker
             // 
+            this.uxStoreCityNamePicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxStoreCityNamePicker.FormattingEnabled = true;
             this.uxStoreCityNamePicker.Location = new System.Drawing.Point(143, 198);
             this.uxStoreCityNamePicker.Name = "uxStoreCityNamePicker";
