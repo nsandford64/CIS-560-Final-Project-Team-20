@@ -110,6 +110,11 @@ namespace FinalProjectView
             return clientRepo.AggregateStoreComponents();
         }
 
+        public void UpdateComponentStorefront(List<string> data)
+        {
+            adminRepo.UpdateComponentStorefront(data);
+        }
+
         public void InsertData(List<string> data, AdminState state)
         {
             if (state == AdminState.Component)

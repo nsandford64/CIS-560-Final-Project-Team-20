@@ -77,5 +77,12 @@ namespace ProjectData
             var d = new InsertCityDataDelegate(data[0], data[1]);
             return executor.ExecuteNonQuery(d);
         }
+
+        public void UpdateComponentStorefront(List<string> data)
+        {
+            var d = new UpdateComponentStorefrontDataDelegate(data[0], Convert.ToInt32(data[1]), data[2], 
+                Convert.ToInt32(data[3]), Convert.ToDecimal(data[4]));
+            executor.ExecuteNonQuery(d);
+        }
     }
 }

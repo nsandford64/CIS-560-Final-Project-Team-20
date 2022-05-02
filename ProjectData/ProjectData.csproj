@@ -58,6 +58,7 @@
     <Compile Include="DataDelegates\InsertComponentStorefrontDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertManufacturerDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
+    <Compile Include="DataDelegates\UpdateComponentStorefrontDataDelegate.cs" />
     <Compile Include="IAdminRepository.cs" />
     <Compile Include="IClientRepository.cs" />
     <Compile Include="Models\AggregateInStockRatioModel.cs" />
@@ -105,6 +106,7 @@
     <Content Include="Sql\Procedures\PartFinder.InsertComponentStorefront.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertManufacturer.sql" />
     <Content Include="Sql\Procedures\PartFinder.InsertStorefront.sql" />
+    <Content Include="Sql\Procedures\PartFinder.UpdateComponentStorefront.sql" />
     <Content Include="Sql\Schemas\PartFinder.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
     <Content Include="Sql\Tables\PartFinder.Cities.sql" />
