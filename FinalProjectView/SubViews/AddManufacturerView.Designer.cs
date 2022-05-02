@@ -79,7 +79,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxManufacturerNameBox);
             this.Controls.Add(this.uxAddManufacturerButton);
             this.Name = "AddManufacturerView";
-            this.Text = "AddManufacturerView";
+            this.Text = "Add Manufacturer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

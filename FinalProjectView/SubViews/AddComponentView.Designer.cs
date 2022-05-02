@@ -163,7 +163,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxComponentNameBox);
             this.Controls.Add(this.uxAddComponentButton);
             this.Name = "AddComponentView";
-            this.Text = "AddComponentView";
+            this.Text = "Add Component";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -101,7 +101,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxCityNameBox);
             this.Controls.Add(this.uxAddCityButton);
             this.Name = "AddCityView";
-            this.Text = "AddCityView";
+            this.Text = "Add City";
             this.ResumeLayout(false);
             this.PerformLayout();
 

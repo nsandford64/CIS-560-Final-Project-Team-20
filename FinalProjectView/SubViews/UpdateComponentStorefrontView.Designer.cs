@@ -141,7 +141,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxPriceComboLabel);
             this.Controls.Add(this.uxPriceComboBox);
             this.Name = "UpdateComponentStorefrontView";
-            this.Text = "UpdateComponentStorefrontForm";
+            this.Text = "Update Component Storefront";
             this.ResumeLayout(false);
             this.PerformLayout();
 

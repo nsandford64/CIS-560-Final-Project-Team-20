@@ -121,7 +121,7 @@ namespace FinalProjectView
             this.Controls.Add(this.uxAddManufacturerButton);
             this.Controls.Add(this.uxAddComponentButton);
             this.Name = "AdminView";
-            this.Text = "AdminGroup";
+            this.Text = "PartFinder Admin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminGroup_FormClosed);
             this.ResumeLayout(false);
 

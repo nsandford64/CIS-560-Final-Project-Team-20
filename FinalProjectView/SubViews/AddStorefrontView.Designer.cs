@@ -164,7 +164,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxStoreNameBox);
             this.Controls.Add(this.uxStorefrontButton);
             this.Name = "AddStorefrontView";
-            this.Text = "AddStorefrontView";
+            this.Text = "Add Storefront";
             this.ResumeLayout(false);
             this.PerformLayout();
 

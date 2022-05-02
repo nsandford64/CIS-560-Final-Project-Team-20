@@ -158,7 +158,7 @@ namespace FinalProjectView.SubViews
             this.Controls.Add(this.uxModelNumberComboLabel);
             this.Controls.Add(this.uxComponentStorefrontButton);
             this.Name = "AddComponentStorefrontView";
-            this.Text = "AddComponentStorefrontView";
+            this.Text = "Add Component Storefront";
             this.ResumeLayout(false);
             this.PerformLayout();
 
