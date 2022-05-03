@@ -58,6 +58,7 @@ namespace FinalProjectView
                     com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
                 }
                 uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                uxErrorLabel.Text = "";
             }
 
         }
@@ -71,15 +72,19 @@ namespace FinalProjectView
             search.Add(uxAddressBox.Text);
 
             int zip;
-            if (!int.TryParse(uxZipCodeBox.Text, out zip))
+            if (uxZipCodeBox.Text == "")
+            {
+                search.Add(uxZipCodeBox.Text);
+            }
+            else if (int.TryParse(uxZipCodeBox.Text, out zip))
+            {
+                search.Add(uxZipCodeBox.Text);
+            }
+            else
             {
                 uxErrorLabel.Text = "ERROR: Check ZipCode box";
                 valid = false;
                 return search;
-            }
-            else
-            {
-                search.Add(uxZipCodeBox.Text);
             }
  
             search.Add(uxStorefrontBox.Text);
@@ -91,7 +96,12 @@ namespace FinalProjectView
             search.Add(uxManufacturerBox.Text);
 
             decimal minPrice = 0;
-            if (!decimal.TryParse(uxMinPriceBox.Text, out minPrice) || Convert.ToDecimal(uxMinPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMinPriceBox.Text) < 1)
+            
+            if(uxMinPriceBox.Text == "")
+            {
+                search.Add(uxMinPriceBox.Text);
+            }
+            else if (!decimal.TryParse(uxMinPriceBox.Text, out minPrice) || Convert.ToDecimal(uxMinPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMinPriceBox.Text) < 1)
             {
                 uxErrorLabel.Text = "ERROR: Please check Min Price box";
                 valid = false;
@@ -103,7 +113,11 @@ namespace FinalProjectView
             }
 
             decimal maxPrice = 0;
-            if (!decimal.TryParse(uxMaxPriceBox.Text, out maxPrice) || Convert.ToDecimal(uxMaxPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMaxPriceBox.Text) < 1)
+            if (uxMaxPriceBox.Text == "")
+            {
+                search.Add(uxMaxPriceBox.Text);
+            }
+            else if (!decimal.TryParse(uxMaxPriceBox.Text, out maxPrice) || Convert.ToDecimal(uxMaxPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMaxPriceBox.Text) < 1)
             {
                 uxErrorLabel.Text = "ERROR: Please check Max Price box";
                 valid = false;

@@ -138,6 +138,7 @@ namespace FinalProjectView
                     input.Add(view.ZipCode);
                     input.Add(view.ModelNumber);
                     input.Add(view.InStock);
+                    if (view.Price == "")
                     input.Add(view.Price);
                     controller.UpdateComponentStorefront(input);
                 }
