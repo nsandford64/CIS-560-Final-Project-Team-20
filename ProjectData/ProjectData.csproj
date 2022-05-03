@@ -62,8 +62,6 @@
     <Compile Include="DataDelegates\InsertManufacturerDataDelegate.cs" />
     <Compile Include="DataDelegates\InsertStorefrontDataDelegate.cs" />
     <Compile Include="DataDelegates\UpdateComponentStorefrontDataDelegate.cs" />
-    <Compile Include="IAdminRepository.cs" />
-    <Compile Include="IClientRepository.cs" />
     <Compile Include="Models\AggregateInStockRatioModel.cs" />
     <Compile Include="Models\AggregateMSRPModel.cs" />
     <Compile Include="Models\AggregateStockModel.cs" />

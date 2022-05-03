@@ -9,7 +9,7 @@ using ProjectData.Models;
 
 namespace ProjectData.DataDelegates
 {
-    public class InsertComponentDataDelegate : NonQueryDataDelegate<ComponentDisplay>
+    public class InsertComponentDataDelegate : DataDelegate
     {
         private readonly string name;
         private readonly string modelNo;
@@ -36,17 +36,6 @@ namespace ProjectData.DataDelegates
             command.Parameters.AddWithValue("Manufacturer", manufacturer);
             command.Parameters.AddWithValue("ComponentCategory", category.ToString());
             command.Parameters.AddWithValue("MSRP", MSRP);
-            var p = command.Parameters.Add("ComponentID", System.Data.SqlDbType.Int);
-            p.Direction = System.Data.ParameterDirection.Output;
-        }
-
-        public override ComponentDisplay Translate(SqlCommand command)
-        {
-            return null;
-            /*
-            return new Component((int)command.Parameters["ComponentID"].Value, name, modelNo, manufacturer,
-                (ComponentCategory)Enum.Parse(typeof(ComponentCategory), category), MSRP);
-            */
         }
     }
 }

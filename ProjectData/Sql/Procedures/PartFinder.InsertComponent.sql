@@ -3,8 +3,7 @@ CREATE OR ALTER PROCEDURE PartFinder.InsertComponent
 	@ModelNumber NVARCHAR(64),
 	@Manufacturer NVARCHAR(64),
 	@ComponentCategory NVARCHAR(64),
-	@MSRP DECIMAL(10,2),
-	@ComponentID INT OUTPUT
+	@MSRP DECIMAL(10,2)
 AS
 
 INSERT INTO PartFinder.Component(ComponentName, ModelNumber, ManufacturerID, ComponentCategoryID, MSRP)
@@ -15,5 +14,4 @@ FROM
 ) AS C(Name, ModelNumber, Manufacturer, ComponentCategory, MSRP)
 INNER JOIN PartFinder.Manufacturer M ON M.ManufacturerName = C.Manufacturer
 INNER JOIN PartFinder.ComponentCategory CC ON CC.ComponentCategoryName = C.ComponentCategory
-SET @ComponentID = SCOPE_IDENTITY();
 GO

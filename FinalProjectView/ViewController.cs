@@ -26,7 +26,6 @@ namespace FinalProjectView
         private List<string> componentCategoryNames;
         private List<string> modelNumbers;
         private List<string> zipCodes;
-        private List<string> addresses;
 
         public ViewController()
         {

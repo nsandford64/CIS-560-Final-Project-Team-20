@@ -1,7 +1,6 @@
 CREATE OR ALTER PROCEDURE PartFinder.InsertCity
 	@CityName NVARCHAR(32),
-	@StateName NVARCHAR(32),
-	@CityID INT OUTPUT
+	@StateName NVARCHAR(32)
 AS
 
 INSERT INTO PartFinder.Cities(CityName, StateID)
@@ -10,6 +9,5 @@ FROM
 (
 	VALUES(@CityName, @StateName)
 ) AS C(CityName, StateName)
-INNER JOIN PartFinder.States S ON S.StateName = C.StateName
-SET @CityID = SCOPE_IDENTITY();
+INNER JOIN PartFinder.States S ON S.StateName = C.StateName;
 GO

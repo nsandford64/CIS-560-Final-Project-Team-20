@@ -1,9 +1,7 @@
 CREATE OR ALTER PROCEDURE PartFinder.InsertManufacturer
-	@Name NVARCHAR(32),
-	@ManufacturerID INT OUTPUT
+	@Name NVARCHAR(32)
 AS
 
 INSERT INTO PartFinder.Manufacturer(ManufacturerName)
 VALUES(@Name)
-SET @ManufacturerID = SCOPE_IDENTITY();
 GO

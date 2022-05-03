@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.DataDelegates
 {
-    public class InsertComponentStorefrontDataDelegate : NonQueryDataDelegate<ComponentStorefront>
+    public class InsertComponentStorefrontDataDelegate : DataDelegate
     {
         private readonly string storeAddress;
         private readonly string zipCode;
@@ -36,11 +36,6 @@ namespace ProjectData.DataDelegates
             command.Parameters.AddWithValue("ModelNumber", modelNo);
             command.Parameters.AddWithValue("Price", price);
             command.Parameters.AddWithValue("InStock", inStock);
-        }
-
-        public override ComponentStorefront Translate(SqlCommand command)
-        {
-            return new ComponentStorefront(storeAddress, zipCode, price, Convert.ToBoolean(inStock));
         }
     }
 }

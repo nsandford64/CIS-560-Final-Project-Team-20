@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData
 {
-    public class SqlAdminRepository : IAdminRepository
+    public class SqlAdminRepository
     {
         private readonly SqlCommandExecutor executor;
         
@@ -60,10 +60,10 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
-        public ComponentDisplay InsertComponent(List<string> data)
+        public void InsertComponent(List<string> data)
         {
             var d = new InsertComponentDataDelegate(data[0], data[1], data[2], data[3], Convert.ToDecimal(data[4]));
-            return executor.ExecuteNonQuery(d);
+            executor.ExecuteNonQuery(d);
         }
 
         public List<string> GetZipCodes()
@@ -72,28 +72,28 @@ namespace ProjectData
             return executor.ExecuteReader(d);
         }
 
-        public ComponentStorefront InsertComponentStorefront(List<string> data)
+        public void InsertComponentStorefront(List<string> data)
         {
             var d = new InsertComponentStorefrontDataDelegate(data[0], data[1], data[2], Convert.ToDecimal(data[3]), Convert.ToInt32(data[4]));
-            return executor.ExecuteNonQuery(d);
+            executor.ExecuteNonQuery(d);
         }
 
-        public Manufacturer InsertManufacturer(List<string> data)
+        public void InsertManufacturer(List<string> data)
         {
             var d = new InsertManufacturerDataDelegate(data[0]);
-            return executor.ExecuteNonQuery(d);
+            executor.ExecuteNonQuery(d);
         }
 
-        public Storefront InsertStorefront(List<string> data)
+        public void InsertStorefront(List<string> data)
         {
             var d = new InsertStorefrontDataDelegate(data[0], data[1], data[2], data[3], data[4]);
-            return executor.ExecuteNonQuery(d);
+            executor.ExecuteNonQuery(d);
         }
 
-        public City InsertCity(List<string> data)
+        public void InsertCity(List<string> data)
         {
             var d = new InsertCityDataDelegate(data[0], data[1]);
-            return executor.ExecuteNonQuery(d);
+            executor.ExecuteNonQuery(d);
         }
 
         public void UpdateComponentStorefront(List<string> data)

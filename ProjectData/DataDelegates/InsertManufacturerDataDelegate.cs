@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.DataDelegates
 {
-    public class InsertManufacturerDataDelegate : NonQueryDataDelegate<Manufacturer>
+    public class InsertManufacturerDataDelegate : DataDelegate
     {
         private readonly string name;
 
@@ -23,14 +23,6 @@ namespace ProjectData.DataDelegates
             base.PrepareCommand(command);
 
             command.Parameters.AddWithValue("Name", name);
-            var p = command.Parameters.Add("ManufacturerID", System.Data.SqlDbType.Int);
-            p.Direction = System.Data.ParameterDirection.Output;
-        }
-
-
-        public override Manufacturer Translate(SqlCommand command)
-        {
-            return new Manufacturer((int)command.Parameters["ManufacturerID"].Value, name);
         }
     }
 }

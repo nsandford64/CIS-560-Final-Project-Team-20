@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectData.DataDelegates
 {
-    public class InsertStorefrontDataDelegate : NonQueryDataDelegate<Storefront>
+    public class InsertStorefrontDataDelegate : DataDelegate
     {
         private readonly string name;
         private readonly string address;
@@ -36,13 +36,6 @@ namespace ProjectData.DataDelegates
             command.Parameters.AddWithValue("ZipCode", zipCode);
             command.Parameters.AddWithValue("CityName", cityName);
             command.Parameters.AddWithValue("StateName", stateName);
-            var p = command.Parameters.Add("StorefrontID", System.Data.SqlDbType.Int);
-            p.Direction = System.Data.ParameterDirection.Output;
-        }
-
-        public override Storefront Translate(SqlCommand command)
-        {
-            return new Storefront((int)command.Parameters["StorefrontID"].Value, name, address, zipCode, cityName);
         }
     }
 }
