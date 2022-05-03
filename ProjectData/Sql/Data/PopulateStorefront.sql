@@ -63,7 +63,7 @@ FROM
 (N'Best Buy Tucson', N'575 E Wetmore Rd', 85705, N'Tucson', N'Arizona'),
 (N'Best Buy East Tucson', N'6025 E Broadway Blvd', 85711, N'Tucson', N'Arizona'),
 (N'Best Buy Fayetteville', N'464 E Joyce Blvd', 72703, N'Fayetteville', N'Arkansas'),
-(N'', N'1501 N Victory Pl', 91502, N'Burbank', N'California'),
+(N'Best Buy Burbank', N'1501 N Victory Pl', 91502, N'Burbank', N'California'),
 (N'Best Buy Irvine Lake Forest', N'16171 Lake Forest Dr', 92618, N'Irvine', N'California'),
 (N'Best Buy Newington', N'3377 Berlin Tpke', 6111, N'Newington', N'Connecticut'),
 (N'Best Buy Christiana', N'2700 Fashion Center Blvd', 19702, N'Newark', N'Delaware'),

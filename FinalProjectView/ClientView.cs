@@ -46,25 +46,41 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
 
-            List<ComponentDisplay> results = controller.GetDataWithParameters(CollectData());
-            foreach(ComponentDisplay com in results)
+            bool valid = true;
+            List<string> data = CollectData(out valid);
+            if (valid)
             {
-                uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
+                List<ComponentDisplay> results = controller.GetDataWithParameters(data);
+                foreach (ComponentDisplay com in results)
+                {
+                    uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
                     com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
                     com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
+                }
+                uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
-            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
         }
 
-        private List<string> CollectData()
+        private List<string> CollectData(out bool valid)
         {
+            valid = true;
             List<string> search = new List<string>();
             search.Add(uxStatePicker.Text);
             
             search.Add(uxAddressBox.Text);
 
-            search.Add(uxZipCodeBox.Text);
+            int zip;
+            if (!int.TryParse(uxZipCodeBox.Text, out zip))
+            {
+                uxErrorLabel.Text = "ERROR: Check ZipCode box";
+                valid = false;
+                return search;
+            }
+            else
+            {
+                search.Add(uxZipCodeBox.Text);
+            }
  
             search.Add(uxStorefrontBox.Text);
 
@@ -74,9 +90,29 @@ namespace FinalProjectView
 
             search.Add(uxManufacturerBox.Text);
 
-            search.Add(uxMinPriceBox.Text);
+            decimal minPrice = 0;
+            if (!decimal.TryParse(uxMinPriceBox.Text, out minPrice) || Convert.ToDecimal(uxMinPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMinPriceBox.Text) < 1)
+            {
+                uxErrorLabel.Text = "ERROR: Please check Min Price box";
+                valid = false;
+                return search;
+            }
+            else
+            {
+                search.Add(uxMinPriceBox.Text);
+            }
 
-            search.Add(uxMaxPriceBox.Text);
+            decimal maxPrice = 0;
+            if (!decimal.TryParse(uxMaxPriceBox.Text, out maxPrice) || Convert.ToDecimal(uxMaxPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMaxPriceBox.Text) < 1)
+            {
+                uxErrorLabel.Text = "ERROR: Please check Max Price box";
+                valid = false;
+                return search;
+            }
+            else
+            {
+                search.Add(uxMaxPriceBox.Text);
+            }
 
             return search;
         }

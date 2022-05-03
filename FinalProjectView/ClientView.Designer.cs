@@ -58,6 +58,7 @@ namespace FinalProjectView
             this.uxAggregateMinLabel = new System.Windows.Forms.Label();
             this.uxLocationFiltersLabel = new System.Windows.Forms.Label();
             this.uxComponentFiltersLabel = new System.Windows.Forms.Label();
+            this.uxErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxAdminButton
@@ -314,11 +315,20 @@ namespace FinalProjectView
             this.uxComponentFiltersLabel.TabIndex = 33;
             this.uxComponentFiltersLabel.Text = "Component Filters:";
             // 
+            // uxErrorLabel
+            // 
+            this.uxErrorLabel.AutoSize = true;
+            this.uxErrorLabel.Location = new System.Drawing.Point(159, 457);
+            this.uxErrorLabel.Name = "uxErrorLabel";
+            this.uxErrorLabel.Size = new System.Drawing.Size(0, 17);
+            this.uxErrorLabel.TabIndex = 34;
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 853);
+            this.Controls.Add(this.uxErrorLabel);
             this.Controls.Add(this.uxComponentFiltersLabel);
             this.Controls.Add(this.uxLocationFiltersLabel);
             this.Controls.Add(this.uxAggregateMinLabel);
@@ -388,6 +398,7 @@ namespace FinalProjectView
         private System.Windows.Forms.Label uxAggregateMinLabel;
         private System.Windows.Forms.Label uxLocationFiltersLabel;
         private System.Windows.Forms.Label uxComponentFiltersLabel;
+        private System.Windows.Forms.Label uxErrorLabel;
     }
 }
 
