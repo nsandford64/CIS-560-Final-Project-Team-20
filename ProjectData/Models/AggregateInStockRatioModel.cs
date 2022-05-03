@@ -14,13 +14,13 @@ namespace ProjectData.Models
 
         public int ZipCode;
 
-        public decimal InStock;
+        public int InStock;
 
-        public decimal OutOfStock;
+        public int OutOfStock;
 
         public decimal StockRatio;
 
-        public AggregateInStockRatioModel(string name, string address, int zip, decimal stock, decimal outStock, decimal ratio)
+        public AggregateInStockRatioModel(string name, string address, int zip, int stock, int outStock, decimal ratio)
         {
             StoreName = name;
             StoreAddress = address;
