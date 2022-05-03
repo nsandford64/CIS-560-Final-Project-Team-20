@@ -46,7 +46,7 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
 
-            List<ComponentDisplay> results = controller.GetDataWithParameters(data);
+            List<ComponentDisplay> results = controller.GetDataWithParameters(CollectData());
             foreach (ComponentDisplay com in results)
             {
                 uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
