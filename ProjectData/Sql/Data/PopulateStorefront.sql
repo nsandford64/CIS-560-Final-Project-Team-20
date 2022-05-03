@@ -1,5 +1,3 @@
-
-
 INSERT INTO PartFinder.Storefront(StoreName,StoreAddress,Zipcode,CityID)
 SELECT S.StoreName, S.StoreAddress, S.Zipcode, C.CityID
 FROM 

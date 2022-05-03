@@ -1,13 +1,4 @@
-
 --Inserts ID's into first two columsn
-INSERT INTO PartFinder.ComponentStorefront(ComponentID, StoreID)
-SELECT C.ComponentID, S.StoreID
-FROM PartFinder.ComponentStorefront SF
-INNER JOIN PartFinder.Component C ON C.ComponentID = SF.ComponentID
-INNER JOIN PartFinder.Storefront S ON S.StoreID = SF.StoreID
-
-
-
 INSERT INTO PartFinder.ComponentStorefront(ComponentID, StoreID, Price, InStock)
 SELECT C.ComponentID, S.StoreID, CS.Price, CS.InStock
 FROM 
