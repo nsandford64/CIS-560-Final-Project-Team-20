@@ -46,46 +46,28 @@ namespace FinalProjectView
             uxResultsBox.Columns.Add("State");
             uxResultsBox.Items.Clear();
 
-            bool valid = true;
-            List<string> data = CollectData(out valid);
-            if (valid)
+            List<string> data = CollectData(CollectData());
+
+            List<ComponentDisplay> results = controller.GetDataWithParameters(data);
+            foreach (ComponentDisplay com in results)
             {
-                List<ComponentDisplay> results = controller.GetDataWithParameters(data);
-                foreach (ComponentDisplay com in results)
-                {
-                    uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
-                    com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
-                    com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
-                }
-                uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-                uxErrorLabel.Text = "";
+                uxResultsBox.Items.Add(new ListViewItem(new string[] {com.ComponentName, com.ModelNumber,
+                com.Manufacturer, com.Category.ToString(), "" + com.Price, "" + com.InStock,
+                com.Storefront, com.Address, "" + com.ZipCode, com.City, com.State}));
             }
+            uxResultsBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
         }
 
-        private List<string> CollectData(out bool valid)
+        private List<string> CollectData()
         {
-            valid = true;
             List<string> search = new List<string>();
             search.Add(uxStatePicker.Text);
             
             search.Add(uxAddressBox.Text);
 
-            int zip;
-            if (uxZipCodeBox.Text == "")
-            {
-                search.Add(uxZipCodeBox.Text);
-            }
-            else if (int.TryParse(uxZipCodeBox.Text, out zip))
-            {
-                search.Add(uxZipCodeBox.Text);
-            }
-            else
-            {
-                uxErrorLabel.Text = "ERROR: Check ZipCode box";
-                valid = false;
-                return search;
-            }
+
+            search.Add(uxZipCodeBox.Text);
  
             search.Add(uxStorefrontBox.Text);
 
@@ -95,39 +77,10 @@ namespace FinalProjectView
 
             search.Add(uxManufacturerBox.Text);
 
-            decimal minPrice = 0;
-            
-            if(uxMinPriceBox.Text == "")
-            {
-                search.Add(uxMinPriceBox.Text);
-            }
-            else if (!decimal.TryParse(uxMinPriceBox.Text, out minPrice) || Convert.ToDecimal(uxMinPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMinPriceBox.Text) < 1)
-            {
-                uxErrorLabel.Text = "ERROR: Please check Min Price box";
-                valid = false;
-                return search;
-            }
-            else
-            {
-                search.Add(uxMinPriceBox.Text);
-            }
+            search.Add(uxMinPriceBox.Text);
 
-            decimal maxPrice = 0;
-            if (uxMaxPriceBox.Text == "")
-            {
-                search.Add(uxMaxPriceBox.Text);
-            }
-            else if (!decimal.TryParse(uxMaxPriceBox.Text, out maxPrice) || Convert.ToDecimal(uxMaxPriceBox.Text) > 99999999 || Convert.ToDecimal(uxMaxPriceBox.Text) < 1)
-            {
-                uxErrorLabel.Text = "ERROR: Please check Max Price box";
-                valid = false;
-                return search;
-            }
-            else
-            {
-                search.Add(uxMaxPriceBox.Text);
-            }
-
+            search.Add(uxMaxPriceBox.Text);
+        
             return search;
         }
 
