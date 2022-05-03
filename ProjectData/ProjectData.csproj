@@ -101,7 +101,6 @@
     <Content Include="Sql\Procedures\PartFinder.GetCityNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponentCategoryNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetComponents.sql" />
-    <Content Include="Sql\Procedures\PartFinder.GetComponentStorefrontRows.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetEditableComponents.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetManufacturerNames.sql" />
     <Content Include="Sql\Procedures\PartFinder.GetModelNumbers.sql" />

@@ -64,7 +64,6 @@ namespace FinalProjectView
             
             search.Add(uxAddressBox.Text);
 
-
             search.Add(uxZipCodeBox.Text);
  
             search.Add(uxStorefrontBox.Text);
