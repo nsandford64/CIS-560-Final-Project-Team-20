@@ -47,6 +47,7 @@ namespace FinalProjectView
                     input.Add(view.ComponentCategory);
                     input.Add(view.MSRP);
                     controller.InsertData(input, AdminState.Component);
+                    controller.UpdateModelNumbers();
                 }
             }
         }
